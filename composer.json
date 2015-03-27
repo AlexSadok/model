@@ -1,0 +1,24 @@
+{
+    "name": "AlexSadok/model",
+    "description": "A module for 3dprint details.",
+    "type": "elgg-plugin",
+    "keywords": [
+        "elgg",
+        "plugin"
+    ],
+    "homepage": "https://github.com/AlexSadok/model",
+    "license": "GPL-2.0",
+    "authors": [
+        {
+            "name": "AlexSadok",
+            "homepage": "https://github.com/AlexSadok",
+            "role": "Developer"
+        }
+    ],
+    "support": {
+            "issues": "https://github.com/AlexSadok/model/issues"
+    },
+    "require": {
+        "composer/installers": ">=1.0.8"
+    }
+}

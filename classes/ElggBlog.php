@@ -2,23 +2,23 @@
 /**
  * Extended class to override the time_created
  * 
- * @property string $status      The published status of the blog post (published, draft)
+ * @property string $status      The published status of the model post (published, draft)
  * @property string $comments_on Whether commenting is allowed (Off, On)
- * @property string $excerpt     An excerpt of the blog post used when displaying the post
+ * @property string $excerpt     An excerpt of the model post used when displaying the post
  */
-class ElggBlog extends ElggObject {
+class Elggmodel extends ElggObject {
 
 	/**
-	 * Set subtype to blog.
+	 * Set subtype to model.
 	 */
 	protected function initializeAttributes() {
 		parent::initializeAttributes();
 
-		$this->attributes['subtype'] = "blog";
+		$this->attributes['subtype'] = "model";
 	}
 
 	/**
-	 * Can a user comment on this blog?
+	 * Can a user comment on this model?
 	 *
 	 * @see ElggObject::canComment()
 	 *
@@ -40,7 +40,7 @@ class ElggBlog extends ElggObject {
 	}
 
 	/**
-	 * Get the excerpt for this blog post
+	 * Get the excerpt for this model post
 	 * 
 	 * @param int $length Length of the excerpt (optional)
 	 * @return string

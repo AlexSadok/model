@@ -1,6 +1,6 @@
 <?php
 /**
- * Blog river view.
+ * model river view.
  */
 
 $item = $vars['item'];

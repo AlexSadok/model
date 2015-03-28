@@ -1,66 +1,66 @@
 <?php
 return array(
-	'blog' => 'Blogs',
-	'blog:blogs' => 'Blogs',
-	'blog:revisions' => 'Revision',
-	'blog:archives' => 'Arkiver',
-	'blog:blog' => 'Blog',
-	'item:object:blog' => 'Blogs',
+	'model' => 'models',
+	'model:models' => 'models',
+	'model:revisions' => 'Revision',
+	'model:archives' => 'Arkiver',
+	'model:model' => 'model',
+	'item:object:model' => 'models',
 
-	'blog:title:user_blogs' => '%s\'s blogge',
-	'blog:title:all_blogs' => 'Alle blogge',
-	'blog:title:friends' => 'Friends\' blogs',
+	'model:title:user_models' => '%s\'s modelge',
+	'model:title:all_models' => 'Alle modelge',
+	'model:title:friends' => 'Friends\' models',
 
-	'blog:group' => 'Gruppe blog',
-	'blog:enableblog' => 'Aktiver gruppe blog',
-	'blog:write' => 'Skriv et blogindlæg',
+	'model:group' => 'Gruppe model',
+	'model:enablemodel' => 'Aktiver gruppe model',
+	'model:write' => 'Skriv et modelindlæg',
 
 	// Editing
-	'blog:add' => 'Tilføj blogindlæg',
-	'blog:edit' => 'Rediger blogindlæg',
-	'blog:excerpt' => 'Uddrag',
-	'blog:body' => 'Brødtekst',
-	'blog:save_status' => 'Sidst gemt: ',
+	'model:add' => 'Tilføj modelindlæg',
+	'model:edit' => 'Rediger modelindlæg',
+	'model:excerpt' => 'Uddrag',
+	'model:body' => 'Brødtekst',
+	'model:save_status' => 'Sidst gemt: ',
 	
-	'blog:revision' => 'Revision',
-	'blog:auto_saved_revision' => 'Auto gemt revision',
+	'model:revision' => 'Revision',
+	'model:auto_saved_revision' => 'Auto gemt revision',
 
 	// messages
-	'blog:message:saved' => 'Blogindlæg gemt.',
-	'blog:error:cannot_save' => 'Kan ikke gemme blogindlæg.',
-	'blog:error:cannot_auto_save' => 'Kan ikke automatisk gemme blog indlægget',
-	'blog:error:cannot_write_to_container' => 'Utilstrækkelig adgang til at gemme bloggen til gruppe.',
-	'blog:messages:warning:draft' => 'Der er en ikke gemt kladde til dette indlæg!',
-	'blog:edit_revision_notice' => '(Gammel version)',
-	'blog:message:deleted_post' => 'Blogindlæg slettet.',
-	'blog:error:cannot_delete_post' => 'Kan ikke slette blogindlæg.',
-	'blog:none' => 'Ingen blogindlæg',
-	'blog:error:missing:title' => 'Angiv en blog titel!',
-	'blog:error:missing:description' => 'Indtast venligst brødteksten til ​​din blog!',
-	'blog:error:cannot_edit_post' => 'Dette indlæg eksisterer måske ikke, eller du har måske ikke tilladelse til at redigere det.',
-	'blog:error:post_not_found' => 'Kan ikke finde det specifikke blog indlæg',
-	'blog:error:revision_not_found' => 'Kan ikke finde denne revision.',
+	'model:message:saved' => 'modelindlæg gemt.',
+	'model:error:cannot_save' => 'Kan ikke gemme modelindlæg.',
+	'model:error:cannot_auto_save' => 'Kan ikke automatisk gemme model indlægget',
+	'model:error:cannot_write_to_container' => 'Utilstrækkelig adgang til at gemme modelgen til gruppe.',
+	'model:messages:warning:draft' => 'Der er en ikke gemt kladde til dette indlæg!',
+	'model:edit_revision_notice' => '(Gammel version)',
+	'model:message:deleted_post' => 'modelindlæg slettet.',
+	'model:error:cannot_delete_post' => 'Kan ikke slette modelindlæg.',
+	'model:none' => 'Ingen modelindlæg',
+	'model:error:missing:title' => 'Angiv en model titel!',
+	'model:error:missing:description' => 'Indtast venligst brødteksten til ​​din model!',
+	'model:error:cannot_edit_post' => 'Dette indlæg eksisterer måske ikke, eller du har måske ikke tilladelse til at redigere det.',
+	'model:error:post_not_found' => 'Kan ikke finde det specifikke model indlæg',
+	'model:error:revision_not_found' => 'Kan ikke finde denne revision.',
 
 	// river
-	'river:create:object:blog' => '%s har offentliggjort et blogindlæg %s',
-	'river:comment:object:blog' => '%s har kommenteret et blogindlæg %s',
+	'river:create:object:model' => '%s har offentliggjort et modelindlæg %s',
+	'river:comment:object:model' => '%s har kommenteret et modelindlæg %s',
 
 	// notifications
-	'blog:notify:summary' => 'Nyt blog indlæg kaldt %s',
-	'blog:notify:subject' => 'Nyt blot indlæg: %s',
-	'blog:notify:body' =>
+	'model:notify:summary' => 'Nyt model indlæg kaldt %s',
+	'model:notify:subject' => 'Nyt blot indlæg: %s',
+	'model:notify:body' =>
 '
-%s udgivet et nyt blog indlæg: %s
+%s udgivet et nyt model indlæg: %s
 
 %s
 
-Se og kommenter på det nye blog indlæg:
+Se og kommenter på det nye model indlæg:
 %s
 ',
 
 	// widget
-	'blog:widget:description' => 'Vis dit seneste blogindlæg',
-	'blog:moreblogs' => 'Flere blogindlæg',
-	'blog:numbertodisplay' => 'Antal af blogindlæg, der skal vises',
-	'blog:noblogs' => 'Ingen blogindlæg'
+	'model:widget:description' => 'Vis dit seneste modelindlæg',
+	'model:moremodels' => 'Flere modelindlæg',
+	'model:numbertodisplay' => 'Antal af modelindlæg, der skal vises',
+	'model:nomodels' => 'Ingen modelindlæg'
 );

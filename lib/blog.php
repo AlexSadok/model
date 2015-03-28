@@ -1,56 +1,56 @@
 <?php
 /**
- * Blog helper functions
+ * model helper functions
  *
- * @package Blog
+ * @package model
  */
 
 
 /**
- * Get page components to view a blog post.
+ * Get page components to view a model post.
  *
- * @param int $guid GUID of a blog entity.
+ * @param int $guid GUID of a model entity.
  * @return array
  */
 function model_get_page_content_read($guid = NULL) {
 
 	$return = array();
 
-	elgg_entity_gatekeeper($guid, 'object', 'blog');
+	elgg_entity_gatekeeper($guid, 'object', 'model');
 
-	$blog = get_entity($guid);
+	$model = get_entity($guid);
 
-	// no header or tabs for viewing an individual blog
+	// no header or tabs for viewing an individual model
 	$return['filter'] = '';
 
-	elgg_set_page_owner_guid($blog->container_guid);
+	elgg_set_page_owner_guid($model->container_guid);
 
 	elgg_group_gatekeeper();
 
-	$return['title'] = $blog->title;
+	$return['title'] = $model->title;
 
-	$container = $blog->getContainerEntity();
+	$container = $model->getContainerEntity();
 	$crumbs_title = $container->name;
 	if (elgg_instanceof($container, 'group')) {
-		elgg_push_breadcrumb($crumbs_title, "blog/group/$container->guid/all");
+		elgg_push_breadcrumb($crumbs_title, "model/group/$container->guid/all");
 	} else {
-		elgg_push_breadcrumb($crumbs_title, "blog/owner/$container->username");
+		elgg_push_breadcrumb($crumbs_title, "model/owner/$container->username");
 	}
 
-	elgg_push_breadcrumb($blog->title);
-	$return['content'] = elgg_view_entity($blog, array('full_view' => true));
+	elgg_push_breadcrumb($model->title);
+	$return['content'] = elgg_view_entity($model, array('full_view' => true));
 	// check to see if we should allow comments
-	if ($blog->comments_on != 'Off' && $blog->status == 'published') {
-		$return['content'] .= elgg_view_comments($blog);
+	if ($model->comments_on != 'Off' && $model->status == 'published') {
+		$return['content'] .= elgg_view_comments($model);
 	}
 
 	return $return;
 }
 
 /**
- * Get page components to list a user's or all blogs.
+ * Get page components to list a user's or all models.
  *
- * @param int $container_guid The GUID of the page owner or NULL for all blogs
+ * @param int $container_guid The GUID of the page owner or NULL for all models
  * @return array
  */
 function model_get_page_content_list($container_guid = NULL) {
@@ -61,9 +61,9 @@ function model_get_page_content_list($container_guid = NULL) {
 
 	$options = array(
 		'type' => 'object',
-		'subtype' => 'blog',
+		'subtype' => 'model',
 		'full_view' => false,
-		'no_results' => elgg_echo('blog:none'),
+		'no_results' => elgg_echo('model:none'),
 		'preload_owners' => true,
 		'distinct' => false,
 	);
@@ -79,7 +79,7 @@ function model_get_page_content_list($container_guid = NULL) {
 		if (!$container) {
 
 		}
-		$return['title'] = elgg_echo('blog:title:user_blogs', array($container->name));
+		$return['title'] = elgg_echo('model:title:user_models', array($container->name));
 
 		$crumbs_title = $container->name;
 		elgg_push_breadcrumb($crumbs_title);
@@ -94,9 +94,9 @@ function model_get_page_content_list($container_guid = NULL) {
 		}
 	} else {
 		$return['filter_context'] = 'all';
-		$return['title'] = elgg_echo('blog:title:all_blogs');
+		$return['title'] = elgg_echo('model:title:all_models');
 		elgg_pop_breadcrumb();
-		elgg_push_breadcrumb(elgg_echo('blog:blogs'));
+		elgg_push_breadcrumb(elgg_echo('model:models'));
 	}
 
 	elgg_register_title_button();
@@ -116,28 +116,28 @@ function model_get_page_content_friends($user_guid) {
 
 	$user = get_user($user_guid);
 	if (!$user) {
-		forward('blog/all');
+		forward('model/all');
 	}
 
 	$return = array();
 
 	$return['filter_context'] = 'friends';
-	$return['title'] = elgg_echo('blog:title:friends');
+	$return['title'] = elgg_echo('model:title:friends');
 
 	$crumbs_title = $user->name;
-	elgg_push_breadcrumb($crumbs_title, "blog/owner/{$user->username}");
+	elgg_push_breadcrumb($crumbs_title, "model/owner/{$user->username}");
 	elgg_push_breadcrumb(elgg_echo('friends'));
 
 	elgg_register_title_button();
 
 	$options = array(
 		'type' => 'object',
-		'subtype' => 'blog',
+		'subtype' => 'model',
 		'full_view' => false,
 		'relationship' => 'friend',
 		'relationship_guid' => $user_guid,
 		'relationship_join_on' => 'container_guid',
-		'no_results' => elgg_echo('blog:none'),
+		'no_results' => elgg_echo('model:none'),
 		'preload_owners' => true,
 	);
 
@@ -147,7 +147,7 @@ function model_get_page_content_friends($user_guid) {
 }
 
 /**
- * Get page components to show blogs with publish dates between $lower and $upper
+ * Get page components to show models with publish dates between $lower and $upper
  *
  * @param int $owner_guid The GUID of the owner of this page
  * @param int $lower      Unix timestamp
@@ -161,12 +161,12 @@ function model_get_page_content_archive($owner_guid, $lower = 0, $upper = 0) {
 
 	$crumbs_title = $owner->name;
 	if (elgg_instanceof($owner, 'user')) {
-		$url = "blog/owner/{$owner->username}";
+		$url = "model/owner/{$owner->username}";
 	} else {
-		$url = "blog/group/$owner->guid/all";
+		$url = "model/group/$owner->guid/all";
 	}
 	elgg_push_breadcrumb($crumbs_title, $url);
-	elgg_push_breadcrumb(elgg_echo('blog:archives'));
+	elgg_push_breadcrumb(elgg_echo('model:archives'));
 
 	if ($lower) {
 		$lower = (int)$lower;
@@ -178,9 +178,9 @@ function model_get_page_content_archive($owner_guid, $lower = 0, $upper = 0) {
 
 	$options = array(
 		'type' => 'object',
-		'subtype' => 'blog',
+		'subtype' => 'model',
 		'full_view' => false,
-		'no_results' => elgg_echo('blog:none'),
+		'no_results' => elgg_echo('model:none'),
 		'preload_owners' => true,
 		'distinct' => false,
 	);
@@ -209,67 +209,67 @@ function model_get_page_content_archive($owner_guid, $lower = 0, $upper = 0) {
 }
 
 /**
- * Get page components to edit/create a blog post.
+ * Get page components to edit/create a model post.
  *
  * @param string  $page     'edit' or 'new'
- * @param int     $guid     GUID of blog post or container
+ * @param int     $guid     GUID of model post or container
  * @param int     $revision Annotation id for revision to edit (optional)
  * @return array
  */
 function model_get_page_content_edit($page, $guid = 0, $revision = NULL) {
 
-	elgg_require_js('elgg/blog/save_draft');
+	elgg_require_js('elgg/model/save_draft');
 
 	$return = array(
 		'filter' => '',
 	);
 
 	$vars = array();
-	$vars['id'] = 'blog-post-edit';
+	$vars['id'] = 'model-post-edit';
 	$vars['class'] = 'elgg-form-alt';
 
 	$sidebar = '';
 	if ($page == 'edit') {
-		$blog = get_entity((int)$guid);
+		$model = get_entity((int)$guid);
 
-		$title = elgg_echo('blog:edit');
+		$title = elgg_echo('model:edit');
 
-		if (elgg_instanceof($blog, 'object', 'blog') && $blog->canEdit()) {
-			$vars['entity'] = $blog;
+		if (elgg_instanceof($model, 'object', 'model') && $model->canEdit()) {
+			$vars['entity'] = $model;
 
-			$title .= ": \"$blog->title\"";
+			$title .= ": \"$model->title\"";
 
 			if ($revision) {
 				$revision = elgg_get_annotation_from_id((int)$revision);
 				$vars['revision'] = $revision;
-				$title .= ' ' . elgg_echo('blog:edit_revision_notice');
+				$title .= ' ' . elgg_echo('model:edit_revision_notice');
 
 				if (!$revision || !($revision->entity_guid == $guid)) {
-					$content = elgg_echo('blog:error:revision_not_found');
+					$content = elgg_echo('model:error:revision_not_found');
 					$return['content'] = $content;
 					$return['title'] = $title;
 					return $return;
 				}
 			}
 
-			$body_vars = model_prepare_form_vars($blog, $revision);
+			$body_vars = model_prepare_form_vars($model, $revision);
 
-			elgg_push_breadcrumb($blog->title, $blog->getURL());
+			elgg_push_breadcrumb($model->title, $model->getURL());
 			elgg_push_breadcrumb(elgg_echo('edit'));
 			
-			elgg_require_js('elgg/blog/save_draft');
+			elgg_require_js('elgg/model/save_draft');
 
-			$content = elgg_view_form('blog/save', $vars, $body_vars);
-			$sidebar = elgg_view('blog/sidebar/revisions', $vars);
+			$content = elgg_view_form('model/save', $vars, $body_vars);
+			$sidebar = elgg_view('model/sidebar/revisions', $vars);
 		} else {
-			$content = elgg_echo('blog:error:cannot_edit_post');
+			$content = elgg_echo('model:error:cannot_edit_post');
 		}
 	} else {
-		elgg_push_breadcrumb(elgg_echo('blog:add'));
+		elgg_push_breadcrumb(elgg_echo('model:add'));
 		$body_vars = model_prepare_form_vars(null);
 
-		$title = elgg_echo('blog:add');
-		$content = elgg_view_form('blog/save', $vars, $body_vars);
+		$title = elgg_echo('model:add');
+		$content = elgg_view_form('model/save', $vars, $body_vars);
 	}
 
 	$return['title'] = $title;
@@ -279,9 +279,9 @@ function model_get_page_content_edit($page, $guid = 0, $revision = NULL) {
 }
 
 /**
- * Pull together blog variables for the save form
+ * Pull together model variables for the save form
  *
- * @param ElggBlog       $post
+ * @param Elggmodel       $post
  * @param ElggAnnotation $revision
  * @return array
  */
@@ -313,14 +313,14 @@ function model_prepare_form_vars($post = NULL, $revision = NULL) {
 		}
 	}
 
-	if (elgg_is_sticky_form('blog')) {
-		$sticky_values = elgg_get_sticky_values('blog');
+	if (elgg_is_sticky_form('model')) {
+		$sticky_values = elgg_get_sticky_values('model');
 		foreach ($sticky_values as $key => $value) {
 			$values[$key] = $value;
 		}
 	}
 	
-	elgg_clear_sticky_form('blog');
+	elgg_clear_sticky_form('model');
 
 	if (!$post) {
 		return $values;
@@ -345,7 +345,7 @@ function model_prepare_form_vars($post = NULL, $revision = NULL) {
 	}
 
 	if ($auto_save && $auto_save->id != $revision->id) {
-		$values['draft_warning'] = elgg_echo('blog:messages:warning:draft');
+		$values['draft_warning'] = elgg_echo('model:messages:warning:draft');
 	}
 
 	return $values;

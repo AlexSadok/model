@@ -1,6 +1,6 @@
 <?php
 /**
- * Save blog entity
+ * Save model entity
  *
  * Can be called by clicking save button or preview button. If preview button,
  * we automatically save as draft. The preview button is only available for
@@ -8,11 +8,11 @@
  *
  * Drafts are saved with the access set to private.
  *
- * @package Blog
+ * @package model
  */
 
 // start a new sticky form session in case of failure
-elgg_make_sticky_form('blog');
+elgg_make_sticky_form('model');
 
 // save or preview
 $save = (bool)get_input('save');
@@ -27,24 +27,24 @@ $guid = get_input('guid');
 
 if ($guid) {
 	$entity = get_entity($guid);
-	if (elgg_instanceof($entity, 'object', 'blog') && $entity->canEdit()) {
-		$blog = $entity;
+	if (elgg_instanceof($entity, 'object', 'model') && $entity->canEdit()) {
+		$model = $entity;
 	} else {
-		register_error(elgg_echo('blog:error:post_not_found'));
+		register_error(elgg_echo('model:error:post_not_found'));
 		forward(get_input('forward', REFERER));
 	}
 
 	// save some data for revisions once we save the new edit
-	$revision_text = $blog->description;
-	$new_post = $blog->new_post;
+	$revision_text = $model->description;
+	$new_post = $model->new_post;
 } else {
-	$blog = new ElggBlog();
-	$blog->subtype = 'blog';
+	$model = new Elggmodel();
+	$model->subtype = 'model';
 	$new_post = TRUE;
 }
 
 // set the previous status for the hooks to update the time_created and river entries
-$old_status = $blog->status;
+$old_status = $model->status;
 
 // set defaults and required values.
 $values = array(
@@ -70,7 +70,7 @@ foreach ($values as $name => $default) {
 	}
 
 	if (in_array($name, $required) && empty($value)) {
-		$error = elgg_echo("blog:error:missing:$name");
+		$error = elgg_echo("model:error:missing:$name");
 	}
 
 	if ($error) {
@@ -94,7 +94,7 @@ foreach ($values as $name => $default) {
 				if (can_write_to_container($user->getGUID(), $value)) {
 					$values[$name] = $value;
 				} else {
-					$error = elgg_echo("blog:error:cannot_write_to_container");
+					$error = elgg_echo("model:error:cannot_write_to_container");
 				}
 			} else {
 				unset($values[$name]);
@@ -121,62 +121,62 @@ if ($values['status'] == 'draft') {
 // assign values to the entity, stopping on error.
 if (!$error) {
 	foreach ($values as $name => $value) {
-		$blog->$name = $value;
+		$model->$name = $value;
 	}
 }
 
 // only try to save base entity if no errors
 if (!$error) {
-	if ($blog->save()) {
+	if ($model->save()) {
 		// remove sticky form entries
-		elgg_clear_sticky_form('blog');
+		elgg_clear_sticky_form('model');
 
 		// remove autosave draft if exists
-		$blog->deleteAnnotations('model_auto_save');
+		$model->deleteAnnotations('model_auto_save');
 
 		// no longer a brand new post.
-		$blog->deleteMetadata('new_post');
+		$model->deleteMetadata('new_post');
 
 		// if this was an edit, create a revision annotation
 		if (!$new_post && $revision_text) {
-			$blog->annotate('model_revision', $revision_text);
+			$model->annotate('model_revision', $revision_text);
 		}
 
-		system_message(elgg_echo('blog:message:saved'));
+		system_message(elgg_echo('model:message:saved'));
 
-		$status = $blog->status;
+		$status = $model->status;
 
 		// add to river if changing status or published, regardless of new post
 		// because we remove it for drafts.
 		if (($new_post || $old_status == 'draft') && $status == 'published') {
 			elgg_create_river_item(array(
-				'view' => 'river/object/blog/create',
+				'view' => 'river/object/model/create',
 				'action_type' => 'create',
-				'subject_guid' => $blog->owner_guid,
-				'object_guid' => $blog->getGUID(),
+				'subject_guid' => $model->owner_guid,
+				'object_guid' => $model->getGUID(),
 			));
 
-			elgg_trigger_event('publish', 'object', $blog);
+			elgg_trigger_event('publish', 'object', $model);
 
 			// reset the creation time for posts that move from draft to published
 			if ($guid) {
-				$blog->time_created = time();
-				$blog->save();
+				$model->time_created = time();
+				$model->save();
 			}
 		} elseif ($old_status == 'published' && $status == 'draft') {
 			elgg_delete_river(array(
-				'object_guid' => $blog->guid,
+				'object_guid' => $model->guid,
 				'action_type' => 'create',
 			));
 		}
 
-		if ($blog->status == 'published' || $save == false) {
-			forward($blog->getURL());
+		if ($model->status == 'published' || $save == false) {
+			forward($model->getURL());
 		} else {
-			forward("blog/edit/$blog->guid");
+			forward("model/edit/$model->guid");
 		}
 	} else {
-		register_error(elgg_echo('blog:error:cannot_save'));
+		register_error(elgg_echo('model:error:cannot_save'));
 		forward($error_forward_url);
 	}
 } else {

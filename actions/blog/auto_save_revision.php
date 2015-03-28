@@ -2,7 +2,7 @@
 /**
  * Action called by AJAX periodic auto saving when editing.
  *
- * @package Blog
+ * @package model
  */
 
 $guid = get_input('guid');
@@ -23,28 +23,28 @@ if ($title && $description) {
 
 	if ($guid) {
 		$entity = get_entity($guid);
-		if (elgg_instanceof($entity, 'object', 'blog') && $entity->canEdit()) {
-			$blog = $entity;
+		if (elgg_instanceof($entity, 'object', 'model') && $entity->canEdit()) {
+			$model = $entity;
 		} else {
-			$error = elgg_echo('blog:error:post_not_found');
+			$error = elgg_echo('model:error:post_not_found');
 		}
 	} else {
-		$blog = new ElggBlog();
-		$blog->subtype = 'blog';
+		$model = new Elggmodel();
+		$model->subtype = 'model';
 
 		// force draft and private for autosaves.
-		$blog->status = 'unsaved_draft';
-		$blog->access_id = ACCESS_PRIVATE;
-		$blog->title = $title;
-		$blog->description = $description;
-		$blog->excerpt = elgg_get_excerpt($excerpt);
+		$model->status = 'unsaved_draft';
+		$model->access_id = ACCESS_PRIVATE;
+		$model->title = $title;
+		$model->description = $description;
+		$model->excerpt = elgg_get_excerpt($excerpt);
 
 		// mark this as a brand new post so we can work out the
 		// river / revision logic in the real save action.
-		$blog->new_post = TRUE;
+		$model->new_post = TRUE;
 
-		if (!$blog->save()) {
-			$error = elgg_echo('blog:error:cannot_save');
+		if (!$model->save()) {
+			$error = elgg_echo('model:error:cannot_save');
 		}
 	}
 
@@ -54,7 +54,7 @@ if ($title && $description) {
 		// we have to delete everything or the times are wrong.
 
 		// don't save if nothing changed
-		$auto_save_annotations = $blog->getAnnotations(array(
+		$auto_save_annotations = $model->getAnnotations(array(
 			'annotation_name' => 'model_auto_save',
 			'limit' => 1,
 		));
@@ -65,29 +65,29 @@ if ($title && $description) {
 		}
 
 		if (!$auto_save) {
-			$annotation_id = $blog->annotate('model_auto_save', $description);
+			$annotation_id = $model->annotate('model_auto_save', $description);
 		} elseif ($auto_save instanceof ElggAnnotation && $auto_save->value != $description) {
-			$blog->deleteAnnotations('model_auto_save');
-			$annotation_id = $blog->annotate('model_auto_save', $description);
+			$model->deleteAnnotations('model_auto_save');
+			$annotation_id = $model->annotate('model_auto_save', $description);
 		} elseif ($auto_save instanceof ElggAnnotation && $auto_save->value == $description) {
 			// this isn't an error because we have an up to date annotation.
 			$annotation_id = $auto_save->id;
 		}
 
 		if (!$annotation_id) {
-			$error = elgg_echo('blog:error:cannot_auto_save');
+			$error = elgg_echo('model:error:cannot_auto_save');
 		}
 	}
 } else {
-	$error = elgg_echo('blog:error:missing:description');
+	$error = elgg_echo('model:error:missing:description');
 }
 
 if ($error) {
 	$json = array('success' => FALSE, 'message' => $error);
 	echo json_encode($json);
 } else {
-	$msg = elgg_echo('blog:message:saved');
-	$json = array('success' => TRUE, 'message' => $msg, 'guid' => $blog->getGUID());
+	$msg = elgg_echo('model:message:saved');
+	$json = array('success' => TRUE, 'message' => $msg, 'guid' => $model->getGUID());
 	echo json_encode($json);
 }
 exit;

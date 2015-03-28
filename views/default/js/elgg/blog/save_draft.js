@@ -1,7 +1,7 @@
 /**
  * Save draft through ajax
  *
- * @package Blog
+ * @package model
  */
 define(function(require) {
 	var $ = require('jquery');
@@ -9,7 +9,7 @@ define(function(require) {
 
 	var saveDraftCallback = function(data, textStatus, XHR) {
 		if (textStatus == 'success' && data.success == true) {
-			var form = $('form[id=blog-post-edit]');
+			var form = $('form[id=model-post-edit]');
 
 			// update the guid input element for new posts that now have a guid
 			form.find('input[name=guid]').val(data.guid);
@@ -21,9 +21,9 @@ define(function(require) {
 			if (mins.length == 1) {
 				mins = '0' + mins;
 			}
-			$(".blog-save-status-time").html(d.toLocaleDateString() + " @ " + d.getHours() + ":" + mins);
+			$(".model-save-status-time").html(d.toLocaleDateString() + " @ " + d.getHours() + ":" + mins);
 		} else {
-			$(".blog-save-status-time").html(elgg.echo('error'));
+			$(".model-save-status-time").html(elgg.echo('error'));
 		}
 	};
 
@@ -33,7 +33,7 @@ define(function(require) {
 		}
 
 		// only save on changed content
-		var form = $('form[id=blog-post-edit]');
+		var form = $('form[id=model-post-edit]');
 		var description = form.find('textarea[name=description]').val();
 		var title = form.find('input[name=title]').val();
 
@@ -41,7 +41,7 @@ define(function(require) {
 			return false;
 		}
 
-		var draftURL = elgg.config.wwwroot + "action/blog/auto_save_revision";
+		var draftURL = elgg.config.wwwroot + "action/model/auto_save_revision";
 		var postData = form.serializeArray();
 
 		// force draft status
@@ -56,7 +56,7 @@ define(function(require) {
 
 	var init = function() {
 		// get a copy of the body to compare for auto save
-		oldDescription = $('form[id=blog-post-edit]').find('textarea[name=description]').val();
+		oldDescription = $('form[id=model-post-edit]').find('textarea[name=description]').val();
 
 		setInterval(saveDraft, 60000);
 	};

@@ -1,27 +1,27 @@
 <?php
 /**
- * Delete blog entity
+ * Delete model entity
  *
- * @package Blog
+ * @package model
  */
 
 $model_guid = get_input('guid');
-$blog = get_entity($model_guid);
+$model = get_entity($model_guid);
 
-if (elgg_instanceof($blog, 'object', 'blog') && $blog->canEdit()) {
-	$container = get_entity($blog->container_guid);
-	if ($blog->delete()) {
-		system_message(elgg_echo('blog:message:deleted_post'));
+if (elgg_instanceof($model, 'object', 'model') && $model->canEdit()) {
+	$container = get_entity($model->container_guid);
+	if ($model->delete()) {
+		system_message(elgg_echo('model:message:deleted_post'));
 		if (elgg_instanceof($container, 'group')) {
-			forward("blog/group/$container->guid/all");
+			forward("model/group/$container->guid/all");
 		} else {
-			forward("blog/owner/$container->username");
+			forward("model/owner/$container->username");
 		}
 	} else {
-		register_error(elgg_echo('blog:error:cannot_delete_post'));
+		register_error(elgg_echo('model:error:cannot_delete_post'));
 	}
 } else {
-	register_error(elgg_echo('blog:error:post_not_found'));
+	register_error(elgg_echo('model:error:post_not_found'));
 }
 
 forward(REFERER);

@@ -1,12 +1,12 @@
 <?php
 /**
- * Edit blog form
+ * Edit model form
  *
- * @package Blog
+ * @package model
  */
 
-$blog = get_entity($vars['guid']);
-$vars['entity'] = $blog;
+$model = get_entity($vars['guid']);
+$vars['entity'] = $model;
 
 $draft_warning = $vars['draft_warning'];
 if ($draft_warning) {
@@ -19,7 +19,7 @@ $preview_button = '';
 
 if ($vars['guid']) {
 	// add a delete button if editing
-	$delete_url = "action/blog/delete?guid={$vars['guid']}";
+	$delete_url = "action/model/delete?guid={$vars['guid']}";
 	$delete_link = elgg_view('output/url', array(
 		'href' => $delete_url,
 		'text' => elgg_echo('delete'),
@@ -28,8 +28,8 @@ if ($vars['guid']) {
 	));
 }
 
-// published blogs do not get the preview button
-if (!$vars['guid'] || ($blog && $blog->status != 'published')) {
+// published models do not get the preview button
+if (!$vars['guid'] || ($model && $model->status != 'published')) {
 	$preview_button = elgg_view('input/submit', array(
 		'value' => elgg_echo('preview'),
 		'name' => 'preview',
@@ -50,21 +50,21 @@ $title_input = elgg_view('input/text', array(
 	'value' => $vars['title']
 ));
 
-$excerpt_label = elgg_echo('blog:excerpt');
+$excerpt_label = elgg_echo('model:excerpt');
 $excerpt_input = elgg_view('input/text', array(
 	'name' => 'excerpt',
 	'id' => 'model_excerpt',
 	'value' => _elgg_html_decode($vars['excerpt'])
 ));
 
-$body_label = elgg_echo('blog:body');
+$body_label = elgg_echo('model:body');
 $body_input = elgg_view('input/longtext', array(
 	'name' => 'description',
 	'id' => 'model_description',
 	'value' => $vars['description']
 ));
 
-$save_status = elgg_echo('blog:save_status');
+$save_status = elgg_echo('model:save_status');
 if ($vars['guid']) {
 	$entity = get_entity($vars['guid']);
 	$saved = date('F j, Y @ H:i', $entity->time_created);
@@ -155,7 +155,7 @@ $categories_input
 
 <div class="elgg-foot">
 	<div class="elgg-subtext mbm">
-	$save_status <span class="blog-save-status-time">$saved</span>
+	$save_status <span class="model-save-status-time">$saved</span>
 	</div>
 
 	$guid_input

@@ -1,54 +1,54 @@
 <?php
 return array(
-	'blog' => 'Блогови',
-	'blog:blogs' => 'Блогови',
-	'blog:revisions' => 'Ревизије',
-	'blog:archives' => 'Архива',
-	'blog:blog' => 'Блог',
-	'item:object:blog' => 'Блогови',
+	'model' => 'Блогови',
+	'model:models' => 'Блогови',
+	'model:revisions' => 'Ревизије',
+	'model:archives' => 'Архива',
+	'model:model' => 'Блог',
+	'item:object:model' => 'Блогови',
 
-	'blog:title:user_blogs' => '%s\'s блог',
-	'blog:title:all_blogs' => 'Сви блогови',
-	'blog:title:friends' => 'Блогови пријатеља',
+	'model:title:user_models' => '%s\'s блог',
+	'model:title:all_models' => 'Сви блогови',
+	'model:title:friends' => 'Блогови пријатеља',
 
-	'blog:group' => 'Блог групе',
-	'blog:enableblog' => 'Укључи блог групе',
-	'blog:write' => 'Напиши блог чланак',
+	'model:group' => 'Блог групе',
+	'model:enablemodel' => 'Укључи блог групе',
+	'model:write' => 'Напиши блог чланак',
 
 	// Editing
-	'blog:add' => 'Додај блог чланак',
-	'blog:edit' => 'Уреди блог чланак',
-	'blog:excerpt' => 'Издвојено',
-	'blog:body' => 'Текст',
-	'blog:save_status' => 'Задњи пут сачуваноЧ',
+	'model:add' => 'Додај блог чланак',
+	'model:edit' => 'Уреди блог чланак',
+	'model:excerpt' => 'Издвојено',
+	'model:body' => 'Текст',
+	'model:save_status' => 'Задњи пут сачуваноЧ',
 	
-	'blog:revision' => 'Ревизија',
-	'blog:auto_saved_revision' => 'Аутоматски сачувана ревизија',
+	'model:revision' => 'Ревизија',
+	'model:auto_saved_revision' => 'Аутоматски сачувана ревизија',
 
 	// messages
-	'blog:message:saved' => 'Блог чланак је сачуван.',
-	'blog:error:cannot_save' => 'Није успело чување чланка.',
-	'blog:error:cannot_auto_save' => 'Није успело аутоматско чување чланка.',
-	'blog:error:cannot_write_to_container' => 'Недовољне привилегије да би чланак био сачуван.',
-	'blog:messages:warning:draft' => 'Постоји несачуван нацрт овог чланка!',
-	'blog:edit_revision_notice' => '(Стара верзија)',
-	'blog:message:deleted_post' => 'Чланак је обрисан.',
-	'blog:error:cannot_delete_post' => 'Није успело брисање чланка.',
-	'blog:none' => 'Нема чланака.',
-	'blog:error:missing:title' => 'Унесите наслов чланка.',
-	'blog:error:missing:description' => 'Унесите текст вашег блога.',
-	'blog:error:cannot_edit_post' => 'Овај чланак мозда не постоји, а можда ви немате привилегије да га уређујете.',
-	'blog:error:post_not_found' => 'Не могу да нађем тражени чланак.',
-	'blog:error:revision_not_found' => 'Не могу да нађем ову ревизију.',
+	'model:message:saved' => 'Блог чланак је сачуван.',
+	'model:error:cannot_save' => 'Није успело чување чланка.',
+	'model:error:cannot_auto_save' => 'Није успело аутоматско чување чланка.',
+	'model:error:cannot_write_to_container' => 'Недовољне привилегије да би чланак био сачуван.',
+	'model:messages:warning:draft' => 'Постоји несачуван нацрт овог чланка!',
+	'model:edit_revision_notice' => '(Стара верзија)',
+	'model:message:deleted_post' => 'Чланак је обрисан.',
+	'model:error:cannot_delete_post' => 'Није успело брисање чланка.',
+	'model:none' => 'Нема чланака.',
+	'model:error:missing:title' => 'Унесите наслов чланка.',
+	'model:error:missing:description' => 'Унесите текст вашег блога.',
+	'model:error:cannot_edit_post' => 'Овај чланак мозда не постоји, а можда ви немате привилегије да га уређујете.',
+	'model:error:post_not_found' => 'Не могу да нађем тражени чланак.',
+	'model:error:revision_not_found' => 'Не могу да нађем ову ревизију.',
 
 	// river
-	'river:create:object:blog' => '%s је објавио блог чланак %s',
-	'river:comment:object:blog' => '%s је коментарисао блог %s',
+	'river:create:object:model' => '%s је објавио блог чланак %s',
+	'river:comment:object:model' => '%s је коментарисао блог %s',
 
 	// notifications
-	'blog:notify:summary' => 'Нови блог чланак %s',
-	'blog:notify:subject' => 'New блог чланак: %s',
-	'blog:notify:body' =>
+	'model:notify:summary' => 'Нови блог чланак %s',
+	'model:notify:subject' => 'New блог чланак: %s',
+	'model:notify:body' =>
 '
 %s је објавио нови блог чланак: %s
 
@@ -59,8 +59,8 @@ return array(
 ',
 
 	// widget
-	'blog:widget:description' => 'Прикажи твоје најновије блог чланке',
-	'blog:moreblogs' => 'Више блог чланака',
-	'blog:numbertodisplay' => 'Број блог чланака за приказ',
-	'blog:noblogs' => 'Нема блог чланака.'
+	'model:widget:description' => 'Прикажи твоје најновије блог чланке',
+	'model:moremodels' => 'Више блог чланака',
+	'model:numbertodisplay' => 'Број блог чланака за приказ',
+	'model:nomodels' => 'Нема блог чланака.'
 );

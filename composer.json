@@ -1,5 +1,5 @@
 {
-    "name": "3dportal/models",
+    "name": "3dportal/model",
     "description": "A plugin for models of 3dprint details.",
     "type": "elgg-plugin",
     "keywords": [

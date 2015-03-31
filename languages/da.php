@@ -1,11 +1,11 @@
 <?php
 return array(
-	'blog' => 'Blogs',
-	'blog:blogs' => 'Blogs',
+	'blog' => 'blogs',
+	'blog:blogs' => 'blogs',
 	'blog:revisions' => 'Revision',
 	'blog:archives' => 'Arkiver',
-	'blog:blog' => 'Blog',
-	'item:object:blog' => 'Blogs',
+	'blog:blog' => 'blog',
+	'item:object:blog' => 'blogs',
 
 	'blog:title:user_blogs' => '%s\'s blogge',
 	'blog:title:all_blogs' => 'Alle blogge',
@@ -26,13 +26,13 @@ return array(
 	'blog:auto_saved_revision' => 'Auto gemt revision',
 
 	// messages
-	'blog:message:saved' => 'Blogindlæg gemt.',
+	'blog:message:saved' => 'blogindlæg gemt.',
 	'blog:error:cannot_save' => 'Kan ikke gemme blogindlæg.',
 	'blog:error:cannot_auto_save' => 'Kan ikke automatisk gemme blog indlægget',
 	'blog:error:cannot_write_to_container' => 'Utilstrækkelig adgang til at gemme bloggen til gruppe.',
 	'blog:messages:warning:draft' => 'Der er en ikke gemt kladde til dette indlæg!',
 	'blog:edit_revision_notice' => '(Gammel version)',
-	'blog:message:deleted_post' => 'Blogindlæg slettet.',
+	'blog:message:deleted_post' => 'blogindlæg slettet.',
 	'blog:error:cannot_delete_post' => 'Kan ikke slette blogindlæg.',
 	'blog:none' => 'Ingen blogindlæg',
 	'blog:error:missing:title' => 'Angiv en blog titel!',

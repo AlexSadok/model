@@ -5,7 +5,7 @@
 
 $group = elgg_get_page_owner_entity();
 
-if ($group->model_enable == "no") {
+if ($group->blog_enable == "no") {
 	return true;
 }
 

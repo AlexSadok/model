@@ -1,8 +1,8 @@
 <?php
 /**
- * Blog helper functions
+ * blog helper functions
  *
- * @package Blog
+ * @package blog
  */
 
 
@@ -12,7 +12,7 @@
  * @param int $guid GUID of a blog entity.
  * @return array
  */
-function model_get_page_content_read($guid = NULL) {
+function blog_get_page_content_read($guid = NULL) {
 
 	$return = array();
 
@@ -53,7 +53,7 @@ function model_get_page_content_read($guid = NULL) {
  * @param int $container_guid The GUID of the page owner or NULL for all blogs
  * @return array
  */
-function model_get_page_content_list($container_guid = NULL) {
+function blog_get_page_content_list($container_guid = NULL) {
 
 	$return = array();
 
@@ -112,7 +112,7 @@ function model_get_page_content_list($container_guid = NULL) {
  * @param int $user_guid
  * @return array
  */
-function model_get_page_content_friends($user_guid) {
+function blog_get_page_content_friends($user_guid) {
 
 	$user = get_user($user_guid);
 	if (!$user) {
@@ -154,7 +154,7 @@ function model_get_page_content_friends($user_guid) {
  * @param int $upper      Unix timestamp
  * @return array
  */
-function model_get_page_content_archive($owner_guid, $lower = 0, $upper = 0) {
+function blog_get_page_content_archive($owner_guid, $lower = 0, $upper = 0) {
 
 	$owner = get_entity($owner_guid);
 	elgg_set_page_owner_guid($owner_guid);
@@ -216,7 +216,7 @@ function model_get_page_content_archive($owner_guid, $lower = 0, $upper = 0) {
  * @param int     $revision Annotation id for revision to edit (optional)
  * @return array
  */
-function model_get_page_content_edit($page, $guid = 0, $revision = NULL) {
+function blog_get_page_content_edit($page, $guid = 0, $revision = NULL) {
 
 	elgg_require_js('elgg/blog/save_draft');
 
@@ -252,7 +252,7 @@ function model_get_page_content_edit($page, $guid = 0, $revision = NULL) {
 				}
 			}
 
-			$body_vars = model_prepare_form_vars($blog, $revision);
+			$body_vars = blog_prepare_form_vars($blog, $revision);
 
 			elgg_push_breadcrumb($blog->title, $blog->getURL());
 			elgg_push_breadcrumb(elgg_echo('edit'));
@@ -266,7 +266,7 @@ function model_get_page_content_edit($page, $guid = 0, $revision = NULL) {
 		}
 	} else {
 		elgg_push_breadcrumb(elgg_echo('blog:add'));
-		$body_vars = model_prepare_form_vars(null);
+		$body_vars = blog_prepare_form_vars(null);
 
 		$title = elgg_echo('blog:add');
 		$content = elgg_view_form('blog/save', $vars, $body_vars);
@@ -281,11 +281,11 @@ function model_get_page_content_edit($page, $guid = 0, $revision = NULL) {
 /**
  * Pull together blog variables for the save form
  *
- * @param ElggBlog       $post
+ * @param Elggblog       $post
  * @param ElggAnnotation $revision
  * @return array
  */
-function model_prepare_form_vars($post = NULL, $revision = NULL) {
+function blog_prepare_form_vars($post = NULL, $revision = NULL) {
 
 	// input names => defaults
 	$values = array(
@@ -335,7 +335,7 @@ function model_prepare_form_vars($post = NULL, $revision = NULL) {
 	// display a notice if there's an autosaved annotation
 	// and we're not editing it.
 	$auto_save_annotations = $post->getAnnotations(array(
-		'annotation_name' => 'model_auto_save',
+		'annotation_name' => 'blog_auto_save',
 		'limit' => 1,
 	));
 	if ($auto_save_annotations) {

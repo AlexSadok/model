@@ -1,6 +1,6 @@
 <?php
 /**
- * Blog archives
+ * blog archives
  */
 
 $loggedin_user = elgg_get_logged_in_user_entity();

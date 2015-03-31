@@ -1,29 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <plugin_manifest xmlns="http://www.elgg.org/plugin_manifest/1.8">
-	<name>3dportal/models</name>
-	<id>models</id>
-	<author>elgg</author>
-	<version>1.10.6</version>
-	<description>A plugin for models of 3dprint details</description>
+	<name>blog</name>
+	<id>blog</id>
+	<author>Core developers</author>
+	<version>1.9</version>
+	<category>bundled</category>
 	<category>content</category>
-	<category>multimedia</category>
-	<website>https://www.elgg.org/</website>
-	<copyright>elgg 2015</copyright>
-	<license>GNU General Public License Version 2</license>
+	<category>widget</category>
+	<description>Adds blogging capabilities to Elgg.</description>
+	<website>http://elgg.org/</website>
+	<copyright>See COPYRIGHT.txt</copyright>
+	<license>GNU General Public License version 2</license>
 	<requires>
 		<type>elgg_release</type>
-		<version>1.10.0</version>
+		<version>1.9</version>
 	</requires>
-	<suggests>
-		<type>plugin</type>
-		<name>widget_manager</name>
-	</suggests>
-	<suggests>
-		<type>plugin</type>
-		<name>elggx_fivestar</name>
-	</suggests>
-	<suggests>
-		<type>plugin</type>
-		<name>elggx_userpoints</name>
-	</suggests>
+	<activate_on_install>true</activate_on_install>
 </plugin_manifest>

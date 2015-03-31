@@ -2,11 +2,11 @@
 /**
  * Delete blog entity
  *
- * @package Blog
+ * @package blog
  */
 
-$model_guid = get_input('guid');
-$blog = get_entity($model_guid);
+$blog_guid = get_input('guid');
+$blog = get_entity($blog_guid);
 
 if (elgg_instanceof($blog, 'object', 'blog') && $blog->canEdit()) {
 	$container = get_entity($blog->container_guid);

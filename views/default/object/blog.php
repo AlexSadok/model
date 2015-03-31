@@ -2,7 +2,7 @@
 /**
  * View for blog objects
  *
- * @package Blog
+ * @package blog
  */
 
 $full = elgg_extract('full_view', $vars, FALSE);

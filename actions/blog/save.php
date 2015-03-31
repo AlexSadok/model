@@ -8,7 +8,7 @@
  *
  * Drafts are saved with the access set to private.
  *
- * @package Blog
+ * @package blog
  */
 
 // start a new sticky form session in case of failure
@@ -38,7 +38,7 @@ if ($guid) {
 	$revision_text = $blog->description;
 	$new_post = $blog->new_post;
 } else {
-	$blog = new ElggBlog();
+	$blog = new Elggblog();
 	$blog->subtype = 'blog';
 	$new_post = TRUE;
 }
@@ -132,14 +132,14 @@ if (!$error) {
 		elgg_clear_sticky_form('blog');
 
 		// remove autosave draft if exists
-		$blog->deleteAnnotations('model_auto_save');
+		$blog->deleteAnnotations('blog_auto_save');
 
 		// no longer a brand new post.
 		$blog->deleteMetadata('new_post');
 
 		// if this was an edit, create a revision annotation
 		if (!$new_post && $revision_text) {
-			$blog->annotate('model_revision', $revision_text);
+			$blog->annotate('blog_revision', $revision_text);
 		}
 
 		system_message(elgg_echo('blog:message:saved'));

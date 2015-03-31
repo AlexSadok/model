@@ -1,8 +1,8 @@
 <?php
 /**
- * Blog sidebar menu showing revisions
+ * blog sidebar menu showing revisions
  *
- * @package Blog
+ * @package blog
  */
 
 //If editing a post, show the previous revisions and drafts.
@@ -13,7 +13,7 @@ if (elgg_instanceof($blog, 'object', 'blog') && $blog->canEdit()) {
 	$revisions = array();
 
 	$auto_save_annotations = $blog->getAnnotations(array(
-		'annotation_name' => 'model_auto_save',
+		'annotation_name' => 'blog_auto_save',
 		'limit' => 1,
 	));
 	if ($auto_save_annotations) {
@@ -22,7 +22,7 @@ if (elgg_instanceof($blog, 'object', 'blog') && $blog->canEdit()) {
 
 	// count(FALSE) == 1!  AHHH!!!
 	$saved_revisions = $blog->getAnnotations(array(
-		'annotation_name' => 'model_revision',
+		'annotation_name' => 'blog_revision',
 		'reverse_order_by' => true,
 	));
 	if ($saved_revisions) {
@@ -59,7 +59,7 @@ if (elgg_instanceof($blog, 'object', 'blog') && $blog->canEdit()) {
 			$time = "<span class='elgg-subtext'>"
 				. elgg_view_friendly_time($revision->time_created) . "</span>";
 
-			if ($revision->name == 'model_auto_save') {
+			if ($revision->name == 'blog_auto_save') {
 				$revision_lang = elgg_echo('blog:auto_saved_revision');
 			} else {
 				$revision_lang = elgg_echo('blog:revision') . " $n";

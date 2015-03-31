@@ -2,7 +2,7 @@
 /**
  * Action called by AJAX periodic auto saving when editing.
  *
- * @package Blog
+ * @package blog
  */
 
 $guid = get_input('guid');
@@ -29,7 +29,7 @@ if ($title && $description) {
 			$error = elgg_echo('blog:error:post_not_found');
 		}
 	} else {
-		$blog = new ElggBlog();
+		$blog = new Elggblog();
 		$blog->subtype = 'blog';
 
 		// force draft and private for autosaves.
@@ -55,7 +55,7 @@ if ($title && $description) {
 
 		// don't save if nothing changed
 		$auto_save_annotations = $blog->getAnnotations(array(
-			'annotation_name' => 'model_auto_save',
+			'annotation_name' => 'blog_auto_save',
 			'limit' => 1,
 		));
 		if ($auto_save_annotations) {
@@ -65,10 +65,10 @@ if ($title && $description) {
 		}
 
 		if (!$auto_save) {
-			$annotation_id = $blog->annotate('model_auto_save', $description);
+			$annotation_id = $blog->annotate('blog_auto_save', $description);
 		} elseif ($auto_save instanceof ElggAnnotation && $auto_save->value != $description) {
-			$blog->deleteAnnotations('model_auto_save');
-			$annotation_id = $blog->annotate('model_auto_save', $description);
+			$blog->deleteAnnotations('blog_auto_save');
+			$annotation_id = $blog->annotate('blog_auto_save', $description);
 		} elseif ($auto_save instanceof ElggAnnotation && $auto_save->value == $description) {
 			// this isn't an error because we have an up to date annotation.
 			$annotation_id = $auto_save->id;

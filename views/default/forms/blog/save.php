@@ -2,7 +2,7 @@
 /**
  * Edit blog form
  *
- * @package Blog
+ * @package blog
  */
 
 $blog = get_entity($vars['guid']);
@@ -46,21 +46,21 @@ $action_buttons = $save_button . $preview_button . $delete_link;
 $title_label = elgg_echo('title');
 $title_input = elgg_view('input/text', array(
 	'name' => 'title',
-	'id' => 'model_title',
+	'id' => 'blog_title',
 	'value' => $vars['title']
 ));
 
 $excerpt_label = elgg_echo('blog:excerpt');
 $excerpt_input = elgg_view('input/text', array(
 	'name' => 'excerpt',
-	'id' => 'model_excerpt',
+	'id' => 'blog_excerpt',
 	'value' => _elgg_html_decode($vars['excerpt'])
 ));
 
 $body_label = elgg_echo('blog:body');
 $body_input = elgg_view('input/longtext', array(
 	'name' => 'description',
-	'id' => 'model_description',
+	'id' => 'blog_description',
 	'value' => $vars['description']
 ));
 
@@ -75,7 +75,7 @@ if ($vars['guid']) {
 $status_label = elgg_echo('status');
 $status_input = elgg_view('input/select', array(
 	'name' => 'status',
-	'id' => 'model_status',
+	'id' => 'blog_status',
 	'value' => $vars['status'],
 	'options_values' => array(
 		'draft' => elgg_echo('status:draft'),
@@ -86,7 +86,7 @@ $status_input = elgg_view('input/select', array(
 $comments_label = elgg_echo('comments');
 $comments_input = elgg_view('input/select', array(
 	'name' => 'comments_on',
-	'id' => 'model_comments_on',
+	'id' => 'blog_comments_on',
 	'value' => $vars['comments_on'],
 	'options_values' => array('On' => elgg_echo('on'), 'Off' => elgg_echo('off'))
 ));
@@ -94,14 +94,14 @@ $comments_input = elgg_view('input/select', array(
 $tags_label = elgg_echo('tags');
 $tags_input = elgg_view('input/tags', array(
 	'name' => 'tags',
-	'id' => 'model_tags',
+	'id' => 'blog_tags',
 	'value' => $vars['tags']
 ));
 
 $access_label = elgg_echo('access');
 $access_input = elgg_view('input/access', array(
 	'name' => 'access_id',
-	'id' => 'model_access_id',
+	'id' => 'blog_access_id',
 	'value' => $vars['access_id']
 ));
 
@@ -117,39 +117,39 @@ echo <<<___HTML
 $draft_warning
 
 <div>
-	<label for="model_title">$title_label</label>
+	<label for="blog_title">$title_label</label>
 	$title_input
 </div>
 
 <div>
-	<label for="model_excerpt">$excerpt_label</label>
+	<label for="blog_excerpt">$excerpt_label</label>
 	$excerpt_input
 </div>
 
 <div>
-	<label for="model_description">$body_label</label>
+	<label for="blog_description">$body_label</label>
 	$body_input
 </div>
 
 <div>
-	<label for="model_tags">$tags_label</label>
+	<label for="blog_tags">$tags_label</label>
 	$tags_input
 </div>
 
 $categories_input
 
 <div>
-	<label for="model_comments_on">$comments_label</label>
+	<label for="blog_comments_on">$comments_label</label>
 	$comments_input
 </div>
 
 <div>
-	<label for="model_access_id">$access_label</label>
+	<label for="blog_access_id">$access_label</label>
 	$access_input
 </div>
 
 <div>
-	<label for="model_status">$status_label</label>
+	<label for="blog_status">$status_label</label>
 	$status_input
 </div>
 

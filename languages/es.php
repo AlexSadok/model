@@ -1,18 +1,18 @@
 <?php
 return array(
-	'blog' => 'Blogs',
-	'blog:blogs' => 'Blogs',
+	'blog' => 'blogs',
+	'blog:blogs' => 'blogs',
 	'blog:revisions' => 'Revisiones',
 	'blog:archives' => 'Archivos',
-	'blog:blog' => 'Blog',
-	'item:object:blog' => 'Blogs',
+	'blog:blog' => 'blog',
+	'item:object:blog' => 'blogs',
 
-	'blog:title:user_blogs' => 'Blogs de %s',
+	'blog:title:user_blogs' => 'blogs de %s',
 	'blog:title:all_blogs' => 'Todos los blogs',
-	'blog:title:friends' => 'Blogs de amigos',
+	'blog:title:friends' => 'blogs de amigos',
 
-	'blog:group' => 'Blogs de grupos',
-	'blog:enableblog' => 'Habilitar Blogs para Grupos',
+	'blog:group' => 'blogs de grupos',
+	'blog:enableblog' => 'Habilitar blogs para Grupos',
 	'blog:write' => 'Escribir una entrada',
 
 	// Editing
@@ -59,7 +59,7 @@ Ver y comentar en el blog:
 ',
 
 	// widget
-	'blog:widget:description' => 'Mostrar las &uacute;ltimas entradas del Blog',
+	'blog:widget:description' => 'Mostrar las &uacute;ltimas entradas del blog',
 	'blog:moreblogs' => 'M&aacute;s entradas',
 	'blog:numbertodisplay' => 'N&uacute;mero de entradas a mostrar',
 	'blog:noblogs' => 'No hay entradas'

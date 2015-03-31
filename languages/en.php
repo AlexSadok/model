@@ -1,11 +1,11 @@
 <?php
 return array(
-	'blog' => 'Blogs',
-	'blog:blogs' => 'Blogs',
+	'blog' => 'blogs',
+	'blog:blogs' => 'blogs',
 	'blog:revisions' => 'Revisions',
 	'blog:archives' => 'Archives',
-	'blog:blog' => 'Blog',
-	'item:object:blog' => 'Blogs',
+	'blog:blog' => 'blog',
+	'item:object:blog' => 'blogs',
 
 	'blog:title:user_blogs' => '%s\'s blogs',
 	'blog:title:all_blogs' => 'All site blogs',
@@ -26,13 +26,13 @@ return array(
 	'blog:auto_saved_revision' => 'Auto Saved Revision',
 
 	// messages
-	'blog:message:saved' => 'Blog post saved.',
+	'blog:message:saved' => 'blog post saved.',
 	'blog:error:cannot_save' => 'Cannot save blog post.',
 	'blog:error:cannot_auto_save' => 'Cannot automatically save blog post.',
 	'blog:error:cannot_write_to_container' => 'Insufficient access to save blog to group.',
 	'blog:messages:warning:draft' => 'There is an unsaved draft of this post!',
 	'blog:edit_revision_notice' => '(Old version)',
-	'blog:message:deleted_post' => 'Blog post deleted.',
+	'blog:message:deleted_post' => 'blog post deleted.',
 	'blog:error:cannot_delete_post' => 'Cannot delete blog post.',
 	'blog:none' => 'No blog posts',
 	'blog:error:missing:title' => 'Please enter a blog title!',

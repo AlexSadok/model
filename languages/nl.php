@@ -1,15 +1,15 @@
 <?php
 return array(
-	'blog' => 'Blog',
-	'blog:blogs' => 'Blogs',
+	'blog' => 'blog',
+	'blog:blogs' => 'blogs',
 	'blog:revisions' => 'Revisies',
 	'blog:archives' => 'Archieven',
-	'blog:blog' => 'Blog',
-	'item:object:blog' => 'Blogberichten',
+	'blog:blog' => 'blog',
+	'item:object:blog' => 'blogberichten',
 
-	'blog:title:user_blogs' => 'Blogs van %s',
+	'blog:title:user_blogs' => 'blogs van %s',
 	'blog:title:all_blogs' => 'Alle blogs van de site',
-	'blog:title:friends' => 'Blogs van vrienden',
+	'blog:title:friends' => 'blogs van vrienden',
 
 	'blog:group' => 'Groepsblog',
 	'blog:enableblog' => 'Groepsblog inschakelen',
@@ -26,13 +26,13 @@ return array(
 	'blog:auto_saved_revision' => 'Revisie automatisch opgeslagen',
 
 	// messages
-	'blog:message:saved' => 'Blog opgeslagen',
-	'blog:error:cannot_save' => 'Blog kon niet worden opgeslagen.',
+	'blog:message:saved' => 'blog opgeslagen',
+	'blog:error:cannot_save' => 'blog kon niet worden opgeslagen.',
 	'blog:error:cannot_auto_save' => 'De blog kon niet automatisch worden opgeslagen',
 	'blog:error:cannot_write_to_container' => 'Je hebt onvoldoende rechten om de blog in de groep op te slaan.',
 	'blog:messages:warning:draft' => 'Er is een niet-opgeslagen concept voor deze blog!',
 	'blog:edit_revision_notice' => '(Oude versie)',
-	'blog:message:deleted_post' => 'Blog verwijderd.',
+	'blog:message:deleted_post' => 'blog verwijderd.',
 	'blog:error:cannot_delete_post' => 'Kan blog niet verwijderen.',
 	'blog:none' => 'Geen blogs',
 	'blog:error:missing:title' => 'Geef een titel aan de blog!',

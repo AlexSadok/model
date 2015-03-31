@@ -1,17 +1,17 @@
 <?php
 return array(
-	'blog' => 'Blogs',
-	'blog:blogs' => 'Blogs',
+	'blog' => 'blogs',
+	'blog:blogs' => 'blogs',
 	'blog:revisions' => 'Revisões',
 	'blog:archives' => 'Arquivos',
-	'blog:blog' => 'Blog',
-	'item:object:blog' => 'Blogs',
+	'blog:blog' => 'blog',
+	'item:object:blog' => 'blogs',
 
 	'blog:title:user_blogs' => '%s\'s blogs',
 	'blog:title:all_blogs' => 'Todos os blogs do site',
-	'blog:title:friends' => 'Blogs dos amigos',
+	'blog:title:friends' => 'blogs dos amigos',
 
-	'blog:group' => 'Blog do grupo',
+	'blog:group' => 'blog do grupo',
 	'blog:enableblog' => 'Ativar blog para o grupo',
 	'blog:write' => 'Postar no blog',
 

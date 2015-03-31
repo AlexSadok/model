@@ -1,8 +1,8 @@
 <?php
 /**
- * Blog sidebar
+ * blog sidebar
  *
- * @package Blog
+ * @package blog
  */
 
 // fetch & display latest comments

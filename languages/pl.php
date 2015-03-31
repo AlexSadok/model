@@ -1,66 +1,66 @@
 <?php
 return array(
-	'blog' => 'blogi',
-	'blog:blogs' => 'blogi',
-	'blog:revisions' => 'Wersje',
-	'blog:archives' => 'Archiwalne',
-	'blog:blog' => 'blog',
-	'item:object:blog' => 'blogi',
+	'model' => 'modeli',
+	'model:models' => 'modeli',
+	'model:revisions' => 'Wersje',
+	'model:archives' => 'Archiwalne',
+	'model:model' => 'model',
+	'item:object:model' => 'modeli',
 
-	'blog:title:user_blogs' => 'blogi użytkownika %s',
-	'blog:title:all_blogs' => 'Wszystkie blogi',
-	'blog:title:friends' => 'blogi znajomych',
+	'model:title:user_models' => 'modeli użytkownika %s',
+	'model:title:all_models' => 'Wszystkie modeli',
+	'model:title:friends' => 'modeli znajomych',
 
-	'blog:group' => 'blogi w grupie',
-	'blog:enableblog' => 'Włącz blog grupy',
-	'blog:write' => 'Dodaj nowy wpis',
+	'model:group' => 'modeli w grupie',
+	'model:enablemodel' => 'Włącz model grupy',
+	'model:write' => 'Dodaj nowy wpis',
 
 	// Editing
-	'blog:add' => 'Dodaj wpis na blogu',
-	'blog:edit' => 'Edytuj wpis na blogu',
-	'blog:excerpt' => 'Fragment',
-	'blog:body' => 'Treść',
-	'blog:save_status' => 'Ostatnio zapisano:',
+	'model:add' => 'Dodaj wpis na modelu',
+	'model:edit' => 'Edytuj wpis na modelu',
+	'model:excerpt' => 'Fragment',
+	'model:body' => 'Treść',
+	'model:save_status' => 'Ostatnio zapisano:',
 	
-	'blog:revision' => 'Wersja',
-	'blog:auto_saved_revision' => 'Automatycznie zapisana wersja',
+	'model:revision' => 'Wersja',
+	'model:auto_saved_revision' => 'Automatycznie zapisana wersja',
 
 	// messages
-	'blog:message:saved' => 'Wpis na blogu został zapisany.',
-	'blog:error:cannot_save' => 'Zapis posta się nie powiódł.',
-	'blog:error:cannot_auto_save' => 'Nie powiódł się automatyczny zapis wpisu na blogu.',
-	'blog:error:cannot_write_to_container' => 'Masz niedostateczne uprawnienia, aby dodawać wpisy na blogu w tej grupie.',
-	'blog:messages:warning:draft' => 'Szkic wpisu nie został zapisany!',
-	'blog:edit_revision_notice' => '(Stara wersja)',
-	'blog:message:deleted_post' => 'Wpis na blogu został usunięty.',
-	'blog:error:cannot_delete_post' => 'Nie można usunąć wpisu na blogu.',
-	'blog:none' => 'Brak wpisów na blogu',
-	'blog:error:missing:title' => 'Proszę podać tytuł wpisu!',
-	'blog:error:missing:description' => 'Proszę podać treść wpisu!',
-	'blog:error:cannot_edit_post' => 'Ten wpis nie istnieje lub nie masz odpowiednich uprawnień do jego edycji.',
-	'blog:error:post_not_found' => 'Nie można znaleźć wskazanego wpisu na blogu.',
-	'blog:error:revision_not_found' => 'Nie znaleziono wskazanej wersji.',
+	'model:message:saved' => 'Wpis na modelu został zapisany.',
+	'model:error:cannot_save' => 'Zapis posta się nie powiódł.',
+	'model:error:cannot_auto_save' => 'Nie powiódł się automatyczny zapis wpisu na modelu.',
+	'model:error:cannot_write_to_container' => 'Masz niedostateczne uprawnienia, aby dodawać wpisy na modelu w tej grupie.',
+	'model:messages:warning:draft' => 'Szkic wpisu nie został zapisany!',
+	'model:edit_revision_notice' => '(Stara wersja)',
+	'model:message:deleted_post' => 'Wpis na modelu został usunięty.',
+	'model:error:cannot_delete_post' => 'Nie można usunąć wpisu na modelu.',
+	'model:none' => 'Brak wpisów na modelu',
+	'model:error:missing:title' => 'Proszę podać tytuł wpisu!',
+	'model:error:missing:description' => 'Proszę podać treść wpisu!',
+	'model:error:cannot_edit_post' => 'Ten wpis nie istnieje lub nie masz odpowiednich uprawnień do jego edycji.',
+	'model:error:post_not_found' => 'Nie można znaleźć wskazanego wpisu na modelu.',
+	'model:error:revision_not_found' => 'Nie znaleziono wskazanej wersji.',
 
 	// river
-	'river:create:object:blog' => '%s opublikował wpis na blogu %s',
-	'river:comment:object:blog' => '%s skomentował wpis na blogu %s',
+	'river:create:object:model' => '%s opublikował wpis na modelu %s',
+	'river:comment:object:model' => '%s skomentował wpis na modelu %s',
 
 	// notifications
-	'blog:notify:summary' => 'Nowy wpis na blogu o nazwie %s',
-	'blog:notify:subject' => 'Nowy wpis na blogu: %s',
-	'blog:notify:body' =>
+	'model:notify:summary' => 'Nowy wpis na modelu o nazwie %s',
+	'model:notify:subject' => 'Nowy wpis na modelu: %s',
+	'model:notify:body' =>
 '
-%s dodał nowy wpis na blogu: %s
+%s dodał nowy wpis na modelu: %s
 
 %s
 
-Zobacz i skomentuj nowy wpis na blogu:
+Zobacz i skomentuj nowy wpis na modelu:
 %s
 ',
 
 	// widget
-	'blog:widget:description' => 'Wyświetl moje najnowsze wpisy na blogu',
-	'blog:moreblogs' => 'Więcej wpisów na blogu',
-	'blog:numbertodisplay' => 'Ilość wyświetlanych wpisów',
-	'blog:noblogs' => 'Brak wpisów na blogu'
+	'model:widget:description' => 'Wyświetl moje najnowsze wpisy na modelu',
+	'model:moremodels' => 'Więcej wpisów na modelu',
+	'model:numbertodisplay' => 'Ilość wyświetlanych wpisów',
+	'model:nomodels' => 'Brak wpisów na modelu'
 );

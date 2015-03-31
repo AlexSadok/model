@@ -1,66 +1,66 @@
 <?php
 return array(
-	'blog' => 'blogs',
-	'blog:blogs' => 'blogs',
-	'blog:revisions' => 'Revisionen',
-	'blog:archives' => 'Ältere blogs',
-	'blog:blog' => 'blog',
-	'item:object:blog' => 'blogs',
+	'model' => 'models',
+	'model:models' => 'models',
+	'model:revisions' => 'Revisionen',
+	'model:archives' => 'Ältere models',
+	'model:model' => 'model',
+	'item:object:model' => 'models',
 
-	'blog:title:user_blogs' => 'blogs von %s',
-	'blog:title:all_blogs' => 'Alle blogs der Community',
-	'blog:title:friends' => 'blogs Deiner Freunde',
+	'model:title:user_models' => 'models von %s',
+	'model:title:all_models' => 'Alle models der Community',
+	'model:title:friends' => 'models Deiner Freunde',
 
-	'blog:group' => 'Gruppen-blog',
-	'blog:enableblog' => 'Gruppen-blog aktivieren',
-	'blog:write' => 'Einen blog-Eintrag verfassen',
+	'model:group' => 'Gruppen-model',
+	'model:enablemodel' => 'Gruppen-model aktivieren',
+	'model:write' => 'Einen model-Eintrag verfassen',
 
 	// Editing
-	'blog:add' => 'blog-Eintrag verfassen',
-	'blog:edit' => 'blog-Eintrag editieren',
-	'blog:excerpt' => 'Auszug',
-	'blog:body' => 'blogtext',
-	'blog:save_status' => 'Zuletzt gespeichert: ',
+	'model:add' => 'model-Eintrag verfassen',
+	'model:edit' => 'model-Eintrag editieren',
+	'model:excerpt' => 'Auszug',
+	'model:body' => 'modeltext',
+	'model:save_status' => 'Zuletzt gespeichert: ',
 	
-	'blog:revision' => 'Revision',
-	'blog:auto_saved_revision' => 'Automatisch gespeicherte Revision',
+	'model:revision' => 'Revision',
+	'model:auto_saved_revision' => 'Automatisch gespeicherte Revision',
 
 	// messages
-	'blog:message:saved' => 'Dein blog-Eintrag wurde gespeichert.',
-	'blog:error:cannot_save' => 'Dein blog-Eintrag konnte nicht gespeichert werden.',
-	'blog:error:cannot_auto_save' => 'Das automatische Speichern Deines blog-Eintrags ist fehlgeschlagen.',
-	'blog:error:cannot_write_to_container' => 'Keine ausreichenden Zugriffsrechte zum Speichern des blog-Eintrags im Gruppenblog vorhanden.',
-	'blog:messages:warning:draft' => 'Die Entwurfsversion dieses Eintrags wurde nocht nicht gespeichert!',
-	'blog:edit_revision_notice' => '(Alte Revision)',
-	'blog:message:deleted_post' => 'Dein blog-Eintrag wurde gelöscht.',
-	'blog:error:cannot_delete_post' => 'Der blog-Eintrag konnte nicht gelöscht werden.',
-	'blog:none' => 'Keine blog-Einträge vorhanden.',
-	'blog:error:missing:title' => 'Bitte einen Titel für Deinen blog-Eintrag angeben!',
-	'blog:error:missing:description' => 'Bitte gebe den Text Deines blog-Eintrages ein!',
-	'blog:error:cannot_edit_post' => 'Dieser blog-Eintrag scheint nicht vorhanden zu sein oder Du hast möglicherweise nicht die notwendigen Zugriffrechte, um ihn zu editieren.',
-	'blog:error:post_not_found' => 'Der ausgewählte blog-Eintrag ist nicht auffindbar.',
-	'blog:error:revision_not_found' => 'Diese Revision ist nicht verfügbar.',
+	'model:message:saved' => 'Dein model-Eintrag wurde gespeichert.',
+	'model:error:cannot_save' => 'Dein model-Eintrag konnte nicht gespeichert werden.',
+	'model:error:cannot_auto_save' => 'Das automatische Speichern Deines model-Eintrags ist fehlgeschlagen.',
+	'model:error:cannot_write_to_container' => 'Keine ausreichenden Zugriffsrechte zum Speichern des model-Eintrags im Gruppenmodel vorhanden.',
+	'model:messages:warning:draft' => 'Die Entwurfsversion dieses Eintrags wurde nocht nicht gespeichert!',
+	'model:edit_revision_notice' => '(Alte Revision)',
+	'model:message:deleted_post' => 'Dein model-Eintrag wurde gelöscht.',
+	'model:error:cannot_delete_post' => 'Der model-Eintrag konnte nicht gelöscht werden.',
+	'model:none' => 'Keine model-Einträge vorhanden.',
+	'model:error:missing:title' => 'Bitte einen Titel für Deinen model-Eintrag angeben!',
+	'model:error:missing:description' => 'Bitte gebe den Text Deines model-Eintrages ein!',
+	'model:error:cannot_edit_post' => 'Dieser model-Eintrag scheint nicht vorhanden zu sein oder Du hast möglicherweise nicht die notwendigen Zugriffrechte, um ihn zu editieren.',
+	'model:error:post_not_found' => 'Der ausgewählte model-Eintrag ist nicht auffindbar.',
+	'model:error:revision_not_found' => 'Diese Revision ist nicht verfügbar.',
 
 	// river
-	'river:create:object:blog' => '%s veröffentlichte den blog-Eintrag %s',
-	'river:comment:object:blog' => '%s kommentierte den blog-Eintrag %s',
+	'river:create:object:model' => '%s veröffentlichte den model-Eintrag %s',
+	'river:comment:object:model' => '%s kommentierte den model-Eintrag %s',
 
 	// notifications
-	'blog:notify:summary' => 'Ein neuer blog-Eintrag mit dem Titel %s wurde erstellt',
-	'blog:notify:subject' => 'Ein neuer blog-Eintrag: %s',
-	'blog:notify:body' =>
+	'model:notify:summary' => 'Ein neuer model-Eintrag mit dem Titel %s wurde erstellt',
+	'model:notify:subject' => 'Ein neuer model-Eintrag: %s',
+	'model:notify:body' =>
 '
-%s hat einen neuen blog-Eintrag erstellt: %s
+%s hat einen neuen model-Eintrag erstellt: %s
 
 %s
 
-Schau Dir den neuen blog-Eintrag an und schreibe einen Kommentar:
+Schau Dir den neuen model-Eintrag an und schreibe einen Kommentar:
 %s
 ',
 
 	// widget
-	'blog:widget:description' => 'Dieses Widget zeigt Deine neuesten blogs an.',
-	'blog:moreblogs' => 'Weitere blog-Einträge',
-	'blog:numbertodisplay' => 'Anzahl der anzuzeigenden blog-Einträge',
-	'blog:noblogs' => 'Keine blog-Einträge vorhanden.'
+	'model:widget:description' => 'Dieses Widget zeigt Deine neuesten models an.',
+	'model:moremodels' => 'Weitere model-Einträge',
+	'model:numbertodisplay' => 'Anzahl der anzuzeigenden model-Einträge',
+	'model:nomodels' => 'Keine model-Einträge vorhanden.'
 );

@@ -1,62 +1,62 @@
 <?php
 return array(
-	'blog' => 'blog',
-	'blog:blogs' => 'blogs',
-	'blog:revisions' => 'Revisies',
-	'blog:archives' => 'Archieven',
-	'blog:blog' => 'blog',
-	'item:object:blog' => 'blogberichten',
+	'model' => 'model',
+	'model:models' => 'models',
+	'model:revisions' => 'Revisies',
+	'model:archives' => 'Archieven',
+	'model:model' => 'model',
+	'item:object:model' => 'modelberichten',
 
-	'blog:title:user_blogs' => 'blogs van %s',
-	'blog:title:all_blogs' => 'Alle blogs van de site',
-	'blog:title:friends' => 'blogs van vrienden',
+	'model:title:user_models' => 'models van %s',
+	'model:title:all_models' => 'Alle models van de site',
+	'model:title:friends' => 'models van vrienden',
 
-	'blog:group' => 'Groepsblog',
-	'blog:enableblog' => 'Groepsblog inschakelen',
-	'blog:write' => 'Schrijf een blog',
+	'model:group' => 'Groepsmodel',
+	'model:enablemodel' => 'Groepsmodel inschakelen',
+	'model:write' => 'Schrijf een model',
 
 	// Editing
-	'blog:add' => 'Voeg een blog toe',
-	'blog:edit' => 'Bewerk blog',
-	'blog:excerpt' => 'Uittreksel',
-	'blog:body' => 'Bericht',
-	'blog:save_status' => 'Laatst opgeslagen:',
+	'model:add' => 'Voeg een model toe',
+	'model:edit' => 'Bewerk model',
+	'model:excerpt' => 'Uittreksel',
+	'model:body' => 'Bericht',
+	'model:save_status' => 'Laatst opgeslagen:',
 	
-	'blog:revision' => 'Revisie',
-	'blog:auto_saved_revision' => 'Revisie automatisch opgeslagen',
+	'model:revision' => 'Revisie',
+	'model:auto_saved_revision' => 'Revisie automatisch opgeslagen',
 
 	// messages
-	'blog:message:saved' => 'blog opgeslagen',
-	'blog:error:cannot_save' => 'blog kon niet worden opgeslagen.',
-	'blog:error:cannot_auto_save' => 'De blog kon niet automatisch worden opgeslagen',
-	'blog:error:cannot_write_to_container' => 'Je hebt onvoldoende rechten om de blog in de groep op te slaan.',
-	'blog:messages:warning:draft' => 'Er is een niet-opgeslagen concept voor deze blog!',
-	'blog:edit_revision_notice' => '(Oude versie)',
-	'blog:message:deleted_post' => 'blog verwijderd.',
-	'blog:error:cannot_delete_post' => 'Kan blog niet verwijderen.',
-	'blog:none' => 'Geen blogs',
-	'blog:error:missing:title' => 'Geef een titel aan de blog!',
-	'blog:error:missing:description' => 'Vertel iets in je blog!',
-	'blog:error:cannot_edit_post' => 'Deze blog bestaat niet, of je hebt onvoldoende rechten om deze te mogen bewerken.',
-	'blog:error:post_not_found' => 'Deze blog is verwijderd, ongeldig, of je hebt onvoldoende rechten om hem te mogen zien.',
-	'blog:error:revision_not_found' => 'Kan deze revisie niet vinden.',
+	'model:message:saved' => 'model opgeslagen',
+	'model:error:cannot_save' => 'model kon niet worden opgeslagen.',
+	'model:error:cannot_auto_save' => 'De model kon niet automatisch worden opgeslagen',
+	'model:error:cannot_write_to_container' => 'Je hebt onvoldoende rechten om de model in de groep op te slaan.',
+	'model:messages:warning:draft' => 'Er is een niet-opgeslagen concept voor deze model!',
+	'model:edit_revision_notice' => '(Oude versie)',
+	'model:message:deleted_post' => 'model verwijderd.',
+	'model:error:cannot_delete_post' => 'Kan model niet verwijderen.',
+	'model:none' => 'Geen models',
+	'model:error:missing:title' => 'Geef een titel aan de model!',
+	'model:error:missing:description' => 'Vertel iets in je model!',
+	'model:error:cannot_edit_post' => 'Deze model bestaat niet, of je hebt onvoldoende rechten om deze te mogen bewerken.',
+	'model:error:post_not_found' => 'Deze model is verwijderd, ongeldig, of je hebt onvoldoende rechten om hem te mogen zien.',
+	'model:error:revision_not_found' => 'Kan deze revisie niet vinden.',
 
 	// river
-	'river:create:object:blog' => '%s plaatste een blog: \'%s\'',
-	'river:comment:object:blog' => '%s reageerde op de blog \'%s\'',
+	'river:create:object:model' => '%s plaatste een model: \'%s\'',
+	'river:comment:object:model' => '%s reageerde op de model \'%s\'',
 
 	// notifications
-	'blog:notify:summary' => 'Nieuwe blog met de titel \'%s\'',
-	'blog:notify:subject' => 'Nieuwe blog: %s',
-	'blog:notify:body' =>
+	'model:notify:summary' => 'Nieuwe model met de titel \'%s\'',
+	'model:notify:subject' => 'Nieuwe model: %s',
+	'model:notify:body' =>
 '
 Hallo!
  
-%s schreef een nieuwe blog: \'%s\' 
+%s schreef een nieuwe model: \'%s\' 
 
 %s 
 
-Je kunt de blog hier lezen en erop reageren: 
+Je kunt de model hier lezen en erop reageren: 
 
 %s
 
@@ -66,8 +66,8 @@ Dit is een automatisch aangemaakt bericht. Je kunt hier niet op antwoorden.
 ',
 
 	// widget
-	'blog:widget:description' => 'Deze widget toont je laatste blogberichten',
-	'blog:moreblogs' => 'Meer blogberichten',
-	'blog:numbertodisplay' => 'Aantal blogberichten om te tonen:',
-	'blog:noblogs' => 'Geen blogs'
+	'model:widget:description' => 'Deze widget toont je laatste modelberichten',
+	'model:moremodels' => 'Meer modelberichten',
+	'model:numbertodisplay' => 'Aantal modelberichten om te tonen:',
+	'model:nomodels' => 'Geen models'
 );

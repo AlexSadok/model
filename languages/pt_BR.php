@@ -1,66 +1,66 @@
 <?php
 return array(
-	'blog' => 'blogs',
-	'blog:blogs' => 'blogs',
-	'blog:revisions' => 'Revisões',
-	'blog:archives' => 'Arquivos',
-	'blog:blog' => 'blog',
-	'item:object:blog' => 'blogs',
+	'model' => 'models',
+	'model:models' => 'models',
+	'model:revisions' => 'Revisões',
+	'model:archives' => 'Arquivos',
+	'model:model' => 'model',
+	'item:object:model' => 'models',
 
-	'blog:title:user_blogs' => '%s\'s blogs',
-	'blog:title:all_blogs' => 'Todos os blogs do site',
-	'blog:title:friends' => 'blogs dos amigos',
+	'model:title:user_models' => '%s\'s models',
+	'model:title:all_models' => 'Todos os models do site',
+	'model:title:friends' => 'models dos amigos',
 
-	'blog:group' => 'blog do grupo',
-	'blog:enableblog' => 'Ativar blog para o grupo',
-	'blog:write' => 'Postar no blog',
+	'model:group' => 'model do grupo',
+	'model:enablemodel' => 'Ativar model para o grupo',
+	'model:write' => 'Postar no model',
 
 	// Editing
-	'blog:add' => 'Adicionar uma postagem no blog',
-	'blog:edit' => 'Editar a postagem do blog',
-	'blog:excerpt' => 'Resumo',
-	'blog:body' => 'Texto',
-	'blog:save_status' => 'Última alteração:',
+	'model:add' => 'Adicionar uma postagem no model',
+	'model:edit' => 'Editar a postagem do model',
+	'model:excerpt' => 'Resumo',
+	'model:body' => 'Texto',
+	'model:save_status' => 'Última alteração:',
 	
-	'blog:revision' => 'Revisão',
-	'blog:auto_saved_revision' => 'Revisão do salvamento automático',
+	'model:revision' => 'Revisão',
+	'model:auto_saved_revision' => 'Revisão do salvamento automático',
 
 	// messages
-	'blog:message:saved' => 'A postagem do blog foi salva.',
-	'blog:error:cannot_save' => 'Não foi possível salvar a postagem do blog.',
-	'blog:error:cannot_auto_save' => 'Não foi possível salvar automaticamente a postagem do blog.',
-	'blog:error:cannot_write_to_container' => 'Acesso insuficiente para salvar um blog no grupo.',
-	'blog:messages:warning:draft' => 'Existe um rascunho dessa postagem sem  salvar. ',
-	'blog:edit_revision_notice' => '(Versão anterior)',
-	'blog:message:deleted_post' => 'A postagem do blog foi excluída.',
-	'blog:error:cannot_delete_post' => 'Não foi possível excluir a postagem do blog.',
-	'blog:none' => 'Não existem postagens nesse blog.',
-	'blog:error:missing:title' => 'Por favor, insira um título do blog!',
-	'blog:error:missing:description' => 'Por favor, insira o texto do blog!',
-	'blog:error:cannot_edit_post' => 'Essa postagem não existe ou você não tem permissão para editá-la.',
-	'blog:error:post_not_found' => 'Não foi possível encontrar a postagem de blog especificada.',
-	'blog:error:revision_not_found' => 'Não foi possível encontrar esta revisão.',
+	'model:message:saved' => 'A postagem do model foi salva.',
+	'model:error:cannot_save' => 'Não foi possível salvar a postagem do model.',
+	'model:error:cannot_auto_save' => 'Não foi possível salvar automaticamente a postagem do model.',
+	'model:error:cannot_write_to_container' => 'Acesso insuficiente para salvar um model no grupo.',
+	'model:messages:warning:draft' => 'Existe um rascunho dessa postagem sem  salvar. ',
+	'model:edit_revision_notice' => '(Versão anterior)',
+	'model:message:deleted_post' => 'A postagem do model foi excluída.',
+	'model:error:cannot_delete_post' => 'Não foi possível excluir a postagem do model.',
+	'model:none' => 'Não existem postagens nesse model.',
+	'model:error:missing:title' => 'Por favor, insira um título do model!',
+	'model:error:missing:description' => 'Por favor, insira o texto do model!',
+	'model:error:cannot_edit_post' => 'Essa postagem não existe ou você não tem permissão para editá-la.',
+	'model:error:post_not_found' => 'Não foi possível encontrar a postagem de model especificada.',
+	'model:error:revision_not_found' => 'Não foi possível encontrar esta revisão.',
 
 	// river
-	'river:create:object:blog' => '%s publicou um postagem no blog %s',
-	'river:comment:object:blog' => '%s comentou no blog %s',
+	'river:create:object:model' => '%s publicou um postagem no model %s',
+	'river:comment:object:model' => '%s comentou no model %s',
 
 	// notifications
-	'blog:notify:summary' => 'Nova postagem no blog chamado %s',
-	'blog:notify:subject' => 'Nova postagem de blog: %s',
-	'blog:notify:body' =>
+	'model:notify:summary' => 'Nova postagem no model chamado %s',
+	'model:notify:subject' => 'Nova postagem de model: %s',
+	'model:notify:body' =>
 '
-%s publicou uma nova postagem no blog: %s
+%s publicou uma nova postagem no model: %s
 
 %s
 
-Ver e comentar sobre postagem do blog:
+Ver e comentar sobre postagem do model:
 %s
 ',
 
 	// widget
-	'blog:widget:description' => 'Mostrar suas últimas postagens do blog',
-	'blog:moreblogs' => 'Mais postagens do blog',
-	'blog:numbertodisplay' => 'Número de postagens para exibir',
-	'blog:noblogs' => 'Não existem postagens do blog'
+	'model:widget:description' => 'Mostrar suas últimas postagens do model',
+	'model:moremodels' => 'Mais postagens do model',
+	'model:numbertodisplay' => 'Número de postagens para exibir',
+	'model:nomodels' => 'Não existem postagens do model'
 );

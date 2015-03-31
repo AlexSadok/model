@@ -1,5 +1,5 @@
 {
-    "name": "3dportal/models_git",
+    "name": "3dportal/models",
     "description": "A plugin for models of 3dprint details.",
     "type": "elgg-plugin",
     "keywords": [
@@ -16,7 +16,7 @@
         }
     ],
     "support": {
-            "issues": "https://fivt.in.ru/stash/projects/CPR/repos/model/browse/issues"
+            "issues": "https://github.com/AlexSadok/model/issues"
     },
     "require": {
         "composer/installers": ">=1.0.8"

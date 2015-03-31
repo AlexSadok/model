@@ -1,66 +1,66 @@
 <?php
 return array(
-	'blog' => 'blogs',
-	'blog:blogs' => 'blogs',
-	'blog:revisions' => 'Révisions',
-	'blog:archives' => 'Archives',
-	'blog:blog' => 'blog',
-	'item:object:blog' => 'blogs',
+	'model' => 'models',
+	'model:models' => 'models',
+	'model:revisions' => 'Révisions',
+	'model:archives' => 'Archives',
+	'model:model' => 'model',
+	'item:object:model' => 'models',
 
-	'blog:title:user_blogs' => 'blogs de %s',
-	'blog:title:all_blogs' => 'Tous les blogs du site',
-	'blog:title:friends' => 'blogs des contacts',
+	'model:title:user_models' => 'models de %s',
+	'model:title:all_models' => 'Tous les models du site',
+	'model:title:friends' => 'models des contacts',
 
-	'blog:group' => 'blog du groupe',
-	'blog:enableblog' => 'Activer le blog du groupe',
-	'blog:write' => 'Écrire un article de blog',
+	'model:group' => 'model du groupe',
+	'model:enablemodel' => 'Activer le model du groupe',
+	'model:write' => 'Écrire un article de model',
 
 	// Editing
-	'blog:add' => 'Ajouter un article de blog',
-	'blog:edit' => 'Modifier l\'article de blog',
-	'blog:excerpt' => 'Extrait',
-	'blog:body' => 'Corps de l\'article',
-	'blog:save_status' => 'Dernier enregistrement:',
+	'model:add' => 'Ajouter un article de model',
+	'model:edit' => 'Modifier l\'article de model',
+	'model:excerpt' => 'Extrait',
+	'model:body' => 'Corps de l\'article',
+	'model:save_status' => 'Dernier enregistrement:',
 	
-	'blog:revision' => 'Révision',
-	'blog:auto_saved_revision' => 'Révision automatiquement enregistrée',
+	'model:revision' => 'Révision',
+	'model:auto_saved_revision' => 'Révision automatiquement enregistrée',
 
 	// messages
-	'blog:message:saved' => 'Article de blog enregistré.',
-	'blog:error:cannot_save' => 'Impossible d\'enregistrer l\'article de blog.',
-	'blog:error:cannot_auto_save' => 'Impossible de sauvegarder automatiquement l\'article de blog. ',
-	'blog:error:cannot_write_to_container' => 'Droits d\'accès insuffisants pour enregistrer l\'article pour ce groupe.',
-	'blog:messages:warning:draft' => 'Il y a un brouillon non enregistré de cet article !',
-	'blog:edit_revision_notice' => '(Ancienne version)',
-	'blog:message:deleted_post' => 'Article supprimé.',
-	'blog:error:cannot_delete_post' => 'Impossible de supprimer l\'article.',
-	'blog:none' => 'Aucun article de blog',
-	'blog:error:missing:title' => 'Vous devez donner un titre à votre article !',
-	'blog:error:missing:description' => 'Le corps de votre article est vide !',
-	'blog:error:cannot_edit_post' => 'Cet article peut ne pas exister ou vous n\'avez pas les autorisations pour le modifier.',
-	'blog:error:post_not_found' => 'Impossible de trouver l\'article de blog spécifié.',
-	'blog:error:revision_not_found' => 'Impossible de trouver cette révision.',
+	'model:message:saved' => 'Article de model enregistré.',
+	'model:error:cannot_save' => 'Impossible d\'enregistrer l\'article de model.',
+	'model:error:cannot_auto_save' => 'Impossible de sauvegarder automatiquement l\'article de model. ',
+	'model:error:cannot_write_to_container' => 'Droits d\'accès insuffisants pour enregistrer l\'article pour ce groupe.',
+	'model:messages:warning:draft' => 'Il y a un brouillon non enregistré de cet article !',
+	'model:edit_revision_notice' => '(Ancienne version)',
+	'model:message:deleted_post' => 'Article supprimé.',
+	'model:error:cannot_delete_post' => 'Impossible de supprimer l\'article.',
+	'model:none' => 'Aucun article de model',
+	'model:error:missing:title' => 'Vous devez donner un titre à votre article !',
+	'model:error:missing:description' => 'Le corps de votre article est vide !',
+	'model:error:cannot_edit_post' => 'Cet article peut ne pas exister ou vous n\'avez pas les autorisations pour le modifier.',
+	'model:error:post_not_found' => 'Impossible de trouver l\'article de model spécifié.',
+	'model:error:revision_not_found' => 'Impossible de trouver cette révision.',
 
 	// river
-	'river:create:object:blog' => '%s a publié un article de blog %s',
-	'river:comment:object:blog' => '%s a commenté sur le blog %s',
+	'river:create:object:model' => '%s a publié un article de model %s',
+	'river:comment:object:model' => '%s a commenté sur le model %s',
 
 	// notifications
-	'blog:notify:summary' => 'Nouvel article de blog nommé %s',
-	'blog:notify:subject' => 'Nouvel article de blog: %s',
-	'blog:notify:body' =>
+	'model:notify:summary' => 'Nouvel article de model nommé %s',
+	'model:notify:subject' => 'Nouvel article de model: %s',
+	'model:notify:body' =>
 '
-%s a publié un nouvel article de blog: %s
+%s a publié un nouvel article de model: %s
 
 %s
 
-Voir et commenter cet article de blog:
+Voir et commenter cet article de model:
 %s
 ',
 
 	// widget
-	'blog:widget:description' => 'Ce widget affiche vos derniers articles de blog',
-	'blog:moreblogs' => 'Plus d\'articles de blog',
-	'blog:numbertodisplay' => 'Nombre d\'articles de blog à afficher',
-	'blog:noblogs' => 'Aucun article de blog'
+	'model:widget:description' => 'Ce widget affiche vos derniers articles de model',
+	'model:moremodels' => 'Plus d\'articles de model',
+	'model:numbertodisplay' => 'Nombre d\'articles de model à afficher',
+	'model:nomodels' => 'Aucun article de model'
 );

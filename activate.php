@@ -1,10 +1,10 @@
 <?php
 /**
- * Register the Elggblog class for the object/blog subtype
+ * Register the ElggModel class for the object/model subtype
  */
 
-if (get_subtype_id('object', 'blog')) {
-	update_subtype('object', 'blog', 'Elggblog');
+if (get_subtype_id('object', 'model')) {
+	update_subtype('object', 'model', 'ElggModel');
 } else {
-	add_subtype('object', 'blog', 'Elggblog');
+	add_subtype('object', 'model', 'ElggModel');
 }

@@ -1,66 +1,66 @@
 <?php
 return array(
-	'blog' => 'blogit',
-	'blog:blogs' => 'blogit',
-	'blog:revisions' => 'Versiot',
-	'blog:archives' => 'Arkisto',
-	'blog:blog' => 'blogi',
-	'item:object:blog' => 'blogit',
+	'model' => 'modelit',
+	'model:models' => 'modelit',
+	'model:revisions' => 'Versiot',
+	'model:archives' => 'Arkisto',
+	'model:model' => 'modeli',
+	'item:object:model' => 'modelit',
 
-	'blog:title:user_blogs' => 'Käyttäjän %s blogit',
-	'blog:title:all_blogs' => 'Kaikki blogit',
-	'blog:title:friends' => 'Ystävien blogit',
+	'model:title:user_models' => 'Käyttäjän %s modelit',
+	'model:title:all_models' => 'Kaikki modelit',
+	'model:title:friends' => 'Ystävien modelit',
 
-	'blog:group' => 'Ryhmän blogi',
-	'blog:enableblog' => 'Ota käyttöön ryhmän blogi',
-	'blog:write' => 'Lisää blogiviesti',
+	'model:group' => 'Ryhmän modeli',
+	'model:enablemodel' => 'Ota käyttöön ryhmän modeli',
+	'model:write' => 'Lisää modeliviesti',
 
 	// Editing
-	'blog:add' => 'Luo uusi blogiviesti',
-	'blog:edit' => 'Muokkaa blogiviestiä',
-	'blog:excerpt' => 'Tiivistelmä',
-	'blog:body' => 'Viesti',
-	'blog:save_status' => 'Tallennettu viimeksi: ',
+	'model:add' => 'Luo uusi modeliviesti',
+	'model:edit' => 'Muokkaa modeliviestiä',
+	'model:excerpt' => 'Tiivistelmä',
+	'model:body' => 'Viesti',
+	'model:save_status' => 'Tallennettu viimeksi: ',
 	
-	'blog:revision' => 'Versio',
-	'blog:auto_saved_revision' => 'Versio  Auto Saved Revision',
+	'model:revision' => 'Versio',
+	'model:auto_saved_revision' => 'Versio  Auto Saved Revision',
 
 	// messages
-	'blog:message:saved' => 'blogi tallennettu.',
-	'blog:error:cannot_save' => 'blogiviestiä ei voida tallentaa.',
-	'blog:error:cannot_auto_save' => 'blogin automaattinen tallentaminen ei toimi.',
-	'blog:error:cannot_write_to_container' => 'Sinulla ei ole oikeuksia luoda blogia tähän ryhmään.',
-	'blog:messages:warning:draft' => 'Tästä blogiviestistä on tallentamaton luonnos!',
-	'blog:edit_revision_notice' => '(Vanha versio)',
-	'blog:message:deleted_post' => 'blogiviesti poistettu.',
-	'blog:error:cannot_delete_post' => 'blogiviestiä ei voida poistaa.',
-	'blog:none' => 'Ei blogiviestejä',
-	'blog:error:missing:title' => 'Syötä blogille otsikko!',
-	'blog:error:missing:description' => 'Syötä blogiviestin sisältö!',
-	'blog:error:cannot_edit_post' => 'Tämä blogiviesti on saatettu poistaa tai sinulla ei ole oikeuksia sen muokkaamiseen.',
-	'blog:error:post_not_found' => 'blogiviestiä ei löydy.',
-	'blog:error:revision_not_found' => 'Versiota ei löydy.',
+	'model:message:saved' => 'modeli tallennettu.',
+	'model:error:cannot_save' => 'modeliviestiä ei voida tallentaa.',
+	'model:error:cannot_auto_save' => 'modelin automaattinen tallentaminen ei toimi.',
+	'model:error:cannot_write_to_container' => 'Sinulla ei ole oikeuksia luoda modelia tähän ryhmään.',
+	'model:messages:warning:draft' => 'Tästä modeliviestistä on tallentamaton luonnos!',
+	'model:edit_revision_notice' => '(Vanha versio)',
+	'model:message:deleted_post' => 'modeliviesti poistettu.',
+	'model:error:cannot_delete_post' => 'modeliviestiä ei voida poistaa.',
+	'model:none' => 'Ei modeliviestejä',
+	'model:error:missing:title' => 'Syötä modelille otsikko!',
+	'model:error:missing:description' => 'Syötä modeliviestin sisältö!',
+	'model:error:cannot_edit_post' => 'Tämä modeliviesti on saatettu poistaa tai sinulla ei ole oikeuksia sen muokkaamiseen.',
+	'model:error:post_not_found' => 'modeliviestiä ei löydy.',
+	'model:error:revision_not_found' => 'Versiota ei löydy.',
 
 	// river
-	'river:create:object:blog' => '%s julkaisi blogiviestin %s',
-	'river:comment:object:blog' => '%s kommentoi blogiviestiä %s',
+	'river:create:object:model' => '%s julkaisi modeliviestin %s',
+	'river:comment:object:model' => '%s kommentoi modeliviestiä %s',
 
 	// notifications
-	'blog:notify:summary' => 'Uusi blogiviesti %s',
-	'blog:notify:subject' => 'Uusi blogiviesti: %s',
-	'blog:notify:body' =>
+	'model:notify:summary' => 'Uusi modeliviesti %s',
+	'model:notify:subject' => 'Uusi modeliviesti: %s',
+	'model:notify:body' =>
 '
-%s julkaisi uuden blogikirjoituksen: %s
+%s julkaisi uuden modelikirjoituksen: %s
 
 %s
 
-Voit lukea blogikirjoituksen täällä:
+Voit lukea modelikirjoituksen täällä:
 %s
 ',
 
 	// widget
-	'blog:widget:description' => 'Näytä viimeisimmät blogiviestisi',
-	'blog:moreblogs' => 'Lisää blogiviestejä',
-	'blog:numbertodisplay' => 'Näytettävien kohteiden määrä',
-	'blog:noblogs' => 'Ei blogiviestejä'
+	'model:widget:description' => 'Näytä viimeisimmät modeliviestisi',
+	'model:moremodels' => 'Lisää modeliviestejä',
+	'model:numbertodisplay' => 'Näytettävien kohteiden määrä',
+	'model:nomodels' => 'Ei modeliviestejä'
 );

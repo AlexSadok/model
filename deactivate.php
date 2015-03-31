@@ -1,6 +1,6 @@
 <?php
 /**
- * Deregister the Elggblog class
+ * Deregister the ElggModel class
  */
 
-update_subtype('object', 'blog');
+update_subtype('object', 'model');

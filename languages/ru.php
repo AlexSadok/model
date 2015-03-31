@@ -1,54 +1,54 @@
 <?php
 return array(
-	'blog' => 'Блог',
-	'blog:blogs' => 'Блоги',
-	'blog:revisions' => 'Редакции',
-	'blog:archives' => 'Архив',
-	'blog:blog' => 'Блог',
-	'item:object:blog' => 'Блог',
+	'model' => 'Блог',
+	'model:models' => 'Блоги',
+	'model:revisions' => 'Редакции',
+	'model:archives' => 'Архив',
+	'model:model' => 'Блог',
+	'item:object:model' => 'Блог',
 
-	'blog:title:user_blogs' => '%s\'s блог',
-	'blog:title:all_blogs' => 'Все блоги',
-	'blog:title:friends' => 'Блоги друзей',
+	'model:title:user_models' => '%s\'s блог',
+	'model:title:all_models' => 'Все блоги',
+	'model:title:friends' => 'Блоги друзей',
 
-	'blog:group' => 'Блог группы',
-	'blog:enableblog' => 'Включить блог группы',
-	'blog:write' => 'Написать сообщение',
+	'model:group' => 'Блог группы',
+	'model:enablemodel' => 'Включить блог группы',
+	'model:write' => 'Написать сообщение',
 
 	// Editing
-	'blog:add' => 'Написать сообщение',
-	'blog:edit' => 'Изменить',
-	'blog:excerpt' => 'Краткое описание',
-	'blog:body' => 'Сообщение',
-	'blog:save_status' => 'Сохранено: ',
+	'model:add' => 'Написать сообщение',
+	'model:edit' => 'Изменить',
+	'model:excerpt' => 'Краткое описание',
+	'model:body' => 'Сообщение',
+	'model:save_status' => 'Сохранено: ',
 	
-	'blog:revision' => 'Редакция',
-	'blog:auto_saved_revision' => 'Автосохраненная редакция',
+	'model:revision' => 'Редакция',
+	'model:auto_saved_revision' => 'Автосохраненная редакция',
 
 	// messages
-	'blog:message:saved' => 'Сохранено.',
-	'blog:error:cannot_save' => 'Не могу сохранить сообщение.',
-	'blog:error:cannot_auto_save' => 'Не могу автоматически сохранить.',
-	'blog:error:cannot_write_to_container' => 'Нехватает прав для сохранения блога.',
-	'blog:messages:warning:draft' => 'Это не сохраненный черновик сообщения!',
-	'blog:edit_revision_notice' => '(Старая версия)',
-	'blog:message:deleted_post' => 'Сообщение удалено.',
-	'blog:error:cannot_delete_post' => 'Не могу удалить сообщение.',
-	'blog:none' => '---',
-	'blog:error:missing:title' => 'Пожалуйста, введите название!',
-	'blog:error:missing:description' => 'Пожалуйста, заполните сообщение!',
-	'blog:error:cannot_edit_post' => 'Извините, сообщение не существует или Вы не имеете прав для его редактирования.',
-	'blog:error:post_not_found' => 'Cannot find specified blog post.',
-	'blog:error:revision_not_found' => 'Cannot find this revision.',
+	'model:message:saved' => 'Сохранено.',
+	'model:error:cannot_save' => 'Не могу сохранить сообщение.',
+	'model:error:cannot_auto_save' => 'Не могу автоматически сохранить.',
+	'model:error:cannot_write_to_container' => 'Нехватает прав для сохранения блога.',
+	'model:messages:warning:draft' => 'Это не сохраненный черновик сообщения!',
+	'model:edit_revision_notice' => '(Старая версия)',
+	'model:message:deleted_post' => 'Сообщение удалено.',
+	'model:error:cannot_delete_post' => 'Не могу удалить сообщение.',
+	'model:none' => '---',
+	'model:error:missing:title' => 'Пожалуйста, введите название!',
+	'model:error:missing:description' => 'Пожалуйста, заполните сообщение!',
+	'model:error:cannot_edit_post' => 'Извините, сообщение не существует или Вы не имеете прав для его редактирования.',
+	'model:error:post_not_found' => 'Cannot find specified model post.',
+	'model:error:revision_not_found' => 'Cannot find this revision.',
 
 	// river
-	'river:create:object:blog' => '%s опубликовал(а) пост %s',
-	'river:comment:object:blog' => '%s комментировал(а) пост %s',
+	'river:create:object:model' => '%s опубликовал(а) пост %s',
+	'river:comment:object:model' => '%s комментировал(а) пост %s',
 
 	// notifications
-	'blog:notify:summary' => 'Новая запись блога %s',
-	'blog:notify:subject' => 'Новая запись блога: %s',
-	'blog:notify:body' =>
+	'model:notify:summary' => 'Новая запись блога %s',
+	'model:notify:subject' => 'Новая запись блога: %s',
+	'model:notify:body' =>
 '
 %s добавил[а] новую запись в блог: %s
 
@@ -59,8 +59,8 @@ return array(
 ',
 
 	// widget
-	'blog:widget:description' => 'Показать последние посты',
-	'blog:moreblogs' => 'Показать больше постов',
-	'blog:numbertodisplay' => 'Число отображаемых постов',
-	'blog:noblogs' => 'Нет постов'
+	'model:widget:description' => 'Показать последние посты',
+	'model:moremodels' => 'Показать больше постов',
+	'model:numbertodisplay' => 'Число отображаемых постов',
+	'model:nomodels' => 'Нет постов'
 );

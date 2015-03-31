@@ -1,0 +1,24 @@
+{
+    "name": "3dportal/models_git",
+    "description": "A plugin for models of 3dprint details.",
+    "type": "elgg-plugin",
+    "keywords": [
+        "elgg",
+        "plugin"
+    ],
+    "homepage": "https://github.com/AlexSadok/model",
+    "license": "GPL-2.0",
+    "authors": [
+        {
+            "name": "elgg",
+            "homepage": "https://github.com/AlexSadok/model",
+            "role": "Developer"
+        }
+    ],
+    "support": {
+            "issues": "https://fivt.in.ru/stash/projects/CPR/repos/model/browse/issues"
+    },
+    "require": {
+        "composer/installers": ">=1.0.8"
+    }
+}
